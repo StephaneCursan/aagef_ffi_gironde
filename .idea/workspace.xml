@@ -2,20 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="11b8eb9d-3b71-4681-b4df-6a10673a948e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Address.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Article.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Country.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Document.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Person.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Place.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Structure.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User_type.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/assets/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/default/createPerson.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/Admin/createPerson.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/AdminPersonController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/Admin/AdminPersonController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Address.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Address.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Article.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Article.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Confine.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Confine.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Country.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Document.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Document.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Person.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Person.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Place.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Place.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Structure.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Structure.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/User_type.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/User_type.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/PersonType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AppBundle/Form/PersonType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/sass/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/sass/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/assets/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/web/assets/css/style.css.map" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,31 +30,58 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Place.php">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/AdminPersonController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="531">
-              <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="74" />
+            <state relative-caret-position="370">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+              <folding>
+                <element signature="e#6#91#0#PHP" expanded="true" />
+                <element signature="e#133#161#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/PersonType.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="851">
+              <caret line="37" column="83" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Document.php">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/Admin/createPerson.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Person.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="462">
-              <caret line="127" column="4" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="131" selection-end-column="7" />
+            <state relative-caret-position="4945">
+              <caret line="215" column="52" selection-start-line="215" selection-start-column="52" selection-end-line="215" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -63,7 +94,19 @@
       <find>index.</find>
       <find>.idea</find>
       <find>author</find>
+      <find>assert</find>
+      <find>man</find>
+      <find>pla</find>
+      <find>person</find>
+      <find>asset</find>
+      <find>entity</find>
+      <find>createfromglobals</find>
+      <find>bookFormView</find>
+      <find>check</find>
     </findStrings>
+    <replaceStrings>
+      <replace>personFormView</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -71,19 +114,27 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/web/assets/css/sass/style.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Document.php" />
         <option value="$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Entity/Book.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
+        <option value="$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Entity/Author.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/User_type.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/User.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Article.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Person.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Place.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Address.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Country.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Structure.php" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Document.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Address.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Person.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Place.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Entity/Confine.php" />
+        <option value="$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Controller/Admin/AdminBookController.php" />
+        <option value="$PROJECT_DIR$/web/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/web/assets/css/sass/style.scss" />
+        <option value="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/Admin/createPerson.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/Admin/AdminPersonController.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Form/PersonType.php" />
       </list>
     </option>
   </component>
@@ -151,6 +202,40 @@
             <path>
               <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
               <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="default" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -171,18 +256,22 @@
               <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
+              <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
               <item name="Entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
               <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="aagef_ffi_gironde" type="b2602c69:ProjectViewProjectNode" />
-              <item name="aagef_ffi_gironde" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="AppBundle" type="462c0819:PsiDirectoryNode" />
+              <item name="Form" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -198,6 +287,15 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Resources/views/Admin" />
+      <recent name="$PROJECT_DIR$/app/Resources/views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web/assets" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -222,12 +320,12 @@
       <option name="presentableId" value="Default" />
       <updated>1556782540198</updated>
       <workItem from="1556782541412" duration="2198000" />
-      <workItem from="1556800183935" duration="17563000" />
+      <workItem from="1556800183935" duration="66057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19761000" />
+    <option name="totallyTimeSpent" value="68255000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -251,7 +349,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2532189" />
@@ -272,7 +370,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.3297568" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,28 +387,12 @@
     <entry file="file://$PROJECT_DIR$/web/assets/js/sass/main.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Controller/Admin/AdminBookController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Controller/Admin/AdminAuthorController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="169" column="25" selection-start-line="169" selection-start-column="25" selection-end-line="169" selection-end-column="25" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../symfony_exos2/web/app_dev.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -326,9 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Repository/AuthorRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -339,103 +418,296 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css.map">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/assets/css/sass/style.scss">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Document.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Entity/Book.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1587">
-          <caret line="69" column="42" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="42" />
-          <folding>
-            <element signature="e#36#68#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="3542">
+          <caret line="159" lean-forward="true" selection-start-line="159" selection-end-line="159" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Entity/Author.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="48" column="63" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="63" />
+        <state relative-caret-position="236">
+          <caret line="67" column="80" lean-forward="true" selection-start-line="67" selection-start-column="70" selection-end-line="67" selection-end-column="80" />
           <folding>
             <element signature="e#36#84#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User_type.php">
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Entity/Book.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        <state relative-caret-position="259">
+          <caret line="70" column="7" selection-start-line="70" selection-start-column="7" selection-end-line="70" selection-end-column="7" />
+          <folding>
+            <element signature="e#36#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Article.php">
+    <entry file="file://$PROJECT_DIR$/web/assets/safari-pinned-tab.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/site.webmanifest">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Projet final/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+        <state relative-caret-position="-3954">
+          <caret line="33" selection-start-line="33" selection-end-line="34" selection-end-column="81" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Address.php">
+    <entry file="file://$USER_HOME$/Documents/Ressources humaines/PortFolio/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
+        <state relative-caret-position="322">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="16" selection-end-column="122" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/composer/autoload_real.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="790">
-          <caret line="36" column="4" selection-start-line="36" selection-start-column="4" selection-end-line="40" selection-end-column="7" />
+        <state relative-caret-position="-757" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="4" lean-forward="true" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding>
+            <element signature="e#7#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Controller/AuthorController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-274" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Repository/BookRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Repository/AuthorRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-819" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/AppBundle.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/web/app_dev.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="45" lean-forward="true" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+          <folding>
+            <element signature="e#7#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/app/Resources/views/default/detail.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1148" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3770">
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Controller/BookController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/app/Resources/views/exos_twigBDD/home.html.twig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/app/Resources/views/baseBDD.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Controller/Admin/AdminBookController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="12" selection-start-line="12" selection-end-line="12" selection-end-column="28" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Country.php">
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Form/AuthorType.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        <state relative-caret-position="92">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#34#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../symfony_exos2/src/AppBundle/Form/BookType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#34#62#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/sass/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/assets/css/style.css.map">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="sourcemapFileViewerProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3496">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Structure.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Place.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="531">
-          <caret line="39" column="59" selection-start-line="39" selection-start-column="59" selection-end-line="39" selection-end-column="74" />
+        <state relative-caret-position="230">
+          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Person.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="127" column="4" lean-forward="true" selection-start-line="127" selection-start-column="4" selection-end-line="131" selection-end-column="7" />
+        <state relative-caret-position="1362">
+          <caret line="217" column="7" selection-start-line="217" selection-start-column="7" selection-end-line="217" selection-end-column="7" />
+          <folding>
+            <element signature="e#122#154#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Document.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="39" column="58" selection-start-line="39" selection-start-column="58" selection-end-line="39" selection-end-column="58" />
+        <state relative-caret-position="619">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/AppBundle.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Place.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1265">
+          <caret line="60" column="84" selection-start-line="60" selection-start-column="84" selection-end-line="60" selection-end-column="84" />
+          <folding>
+            <element signature="e#122#154#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Address.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2487">
+          <caret line="132" selection-start-line="132" selection-end-line="132" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Confine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1679">
+          <caret line="78" column="6" selection-start-line="78" selection-start-column="6" selection-end-line="78" selection-end-column="6" />
+          <folding>
+            <element signature="e#122#154#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/User_type.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/Admin/AdminPersonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+            <element signature="e#133#161#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Form/PersonType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="851">
+          <caret line="37" column="83" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/Admin/createPerson.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4945">
+          <caret line="215" column="52" selection-start-line="215" selection-start-column="52" selection-end-line="215" selection-end-column="52" />
         </state>
       </provider>
     </entry>

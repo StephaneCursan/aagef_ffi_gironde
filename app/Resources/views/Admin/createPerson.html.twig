@@ -1,0 +1,223 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Créer un individu{% endblock %}
+
+{% block body %}
+
+    <article>
+
+        {{ form_start(personFormView) }}
+
+            <div class="form-group">
+                {{ form_label(personFormView.lastName, 'Apellido(s)') }}
+                {{ form_errors(personFormView.lastName) }}
+                {{ form_widget(personFormView.lastName,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'Apellido(s)'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.firstName, 'Nombre(s)') }}
+                {{ form_errors(personFormView.firstName) }}
+                {{ form_widget(personFormView.firstName,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'Nombre(s)'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.sex, 'Sexo') }}
+                {{ form_errors(personFormView.sex) }}
+                {{ form_widget(personFormView.sex) }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.birthDay ) }}
+                {{ form_errors(personFormView.birthDay) }}
+                {{ form_widget(personFormView.birthDay,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'DD'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.birthMonth) }}
+                {{ form_errors(personFormView.birthMonth) }}
+                {{ form_widget(personFormView.birthMonth,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'MM'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.birthYear) }}
+                {{ form_errors(personFormView.birthYear) }}
+                {{ form_widget(personFormView.birthYear,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'AAAA'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.birthPlace, 'Lugar de nacimiento') }}
+                {{ form_errors(personFormView.birthPlace) }}
+                {{ form_widget(personFormView.birthPlace,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'Lugar del nacimiento'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.homePlace, 'Lugar de domicilio') }}
+                {{ form_errors(personFormView.homePlace) }}
+                {{ form_widget(personFormView.homePlace,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'Lugar de domicilio'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.unionType, 'Estado civil') }}
+                {{ form_errors(personFormView.unionType) }}
+                {{ form_widget(personFormView.unionType) }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.job, 'Profesión') }}
+                {{ form_errors(personFormView.job) }}
+                {{ form_widget(personFormView.job,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'Profesión'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.deathDay) }}
+                {{ form_errors(personFormView.deathDay) }}
+                {{ form_widget(personFormView.deathDay,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'DD'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.deathMonth) }}
+                {{ form_errors(personFormView.deathMonth) }}
+                {{ form_widget(personFormView.deathMonth,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'MM'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.deathYear) }}
+                {{ form_errors(personFormView.deathYear) }}
+                {{ form_widget(personFormView.deathYear,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'AAAA'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(personFormView.deathPlace, 'Lugar del fallecimiento') }}
+                {{ form_errors(personFormView.deathPlace) }}
+                {{ form_widget(personFormView.deathPlace,
+                    { 'attr' :
+                        {
+                            'class' : 'form-control-lg',
+                            'placeholder': 'Lugar del fallecimiento'
+                        }
+                    },
+                    {
+                        'id' : ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_row (personFormView.submit) }}
+            </div>
+
+        {{ form_end(personFormView) }}
+
+    </article>
+
+{% endblock %}

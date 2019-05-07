@@ -40,4 +40,94 @@ class Address
      * @ORM\Column(name="address2", type="string", length=50, nullable=true)
      */
     private $address2;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Place", inversedBy="address")
+     */
+    private $place;
+
+    /**
+     * @ORM\OneToOne(targetEntity="Structure")
+     */
+    private $structure;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress1()
+    {
+        return $this->address1;
+    }
+
+    /**
+     * @param string $address1
+     */
+    public function setAddress1($address1)
+    {
+        $this->address1 = $address1;
+    }
+
+    /**
+     * @return string
+     */
+    public function getAddress2()
+    {
+        return $this->address2;
+    }
+
+    /**
+     * @param string $address2
+     */
+    public function setAddress2($address2)
+    {
+        $this->address2 = $address2;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlace()
+    {
+        return $this->place;
+    }
+
+    /**
+     * @param mixed $place
+     */
+    public function setPlace($place)
+    {
+        $this->place = $place;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getStructure()
+    {
+        return $this->structure;
+    }
+
+    /**
+     * @param mixed $structure
+     */
+    public function setStructure($structure)
+    {
+        $this->structure = $structure;
+    }
 }

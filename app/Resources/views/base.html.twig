@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="fr">
+
     <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <!-- Required meta tags -->
+        <meta charset="UTF-8">
+
+        <title>{% block title %}AAGEF-FFI - Les Résistants espagnols en Gironde 1939-1945{% endblock %}</title>
         {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+
+        <!-- Favicon management -->
+        <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/favicon-32x32.png') }}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('assets/favicon-16x16.png') }}">
+        <link rel="manifest" href="{{ asset('assets/site.webmanifest') }}">
+        <link rel="mask-icon" href="{{ asset('assets/safari-pinned-tab.svg') }}" color="454545">
+        <meta name="msapplication-TileColor" content="#9f00a7">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}">
+
+        <!-- Font Library CSS -->
+        <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/metropolis" type="text/css">
+
+        <!-- Google Fonts CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet">
+
+        <!-- Font Awesome CSS -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+            integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+
     </head>
+
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
     </body>
+
 </html>

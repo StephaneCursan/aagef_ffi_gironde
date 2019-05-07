@@ -54,4 +54,105 @@ class Article
      * @ORM\Column(name="date", type="datetime")
      */
     private $date;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="article")
+     */
+    private $user;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isPage()
+    {
+        return $this->isPage;
+    }
+
+    /**
+     * @param bool $isPage
+     */
+    public function setIsPage($isPage)
+    {
+        $this->isPage = $isPage;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    /**
+     * @param string $content
+     */
+    public function setContent($content)
+    {
+        $this->content = $content;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * @param \DateTime $date
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param mixed $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+    }
 }

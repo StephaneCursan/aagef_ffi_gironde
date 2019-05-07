@@ -28,9 +28,41 @@ class Structure
     private $id;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="type", type="integer", length=50)
+     * @ORM\Column(name="type", type="string", length=50, unique=true)
      */
     private $type;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
 }
