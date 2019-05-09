@@ -17,7 +17,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AdminPersonController extends Controller
 {
     /**
-     * @Route("/database/persons", name="persons")
+     * @Route("Admin/database/persons", name="persons")
      */
     public function PersonCreateAction(Request $request)
     {
@@ -35,6 +35,7 @@ class AdminPersonController extends Controller
             $entityManager->persist($person);
             $entityManager->flush();
 
+            var_dump('individu enregistré'); die;
         }
 
         return $this->render('Admin/createPerson.html.twig',

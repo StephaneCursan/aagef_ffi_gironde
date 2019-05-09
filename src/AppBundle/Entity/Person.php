@@ -50,40 +50,11 @@ class Person
     private $sex;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="birthDay", type="smallint", nullable=true)
-     *
-     * @Assert\Length(
-     *     min = 2,
-     *     max = 2
-     * )
+     * @ORM\Column(name="birthDate", type="date")
      */
-    private $birthDay;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="birthMonth", type="smallint", nullable=true)
-     *
-     * @Assert\Length(
-     *     min = 2,
-     *     max = 2
-     * )
-     */
-    private $birthMonth;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="birthYear", type="smallint", nullable=true)
-     *
-     * @Assert\Length(
-     *     min = 4,
-     *     max = 4
-     * )
-     */
-    private $birthYear;
+    private $birthDate;
 
     /**
      * @var string
@@ -114,40 +85,11 @@ class Person
     private $job;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="deathDay", type="smallint", nullable=true)
-     *
-     * @Assert\Length(
-     *     min = 2,
-     *     max = 2
-     * )
+     * @ORM\Column(name="deathDate", type="date")
      */
-    private $deathDay;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="deathMonth", type="smallint", length=2, nullable=true)
-     *
-     * @Assert\Length(
-     *     min = 2,
-     *     max = 2
-     * )
-     */
-    private $deathMonth;
-
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="deathYear", type="smallint", nullable=true)
-     *
-     * @Assert\Length(
-     *     min = 4,
-     *     max = 4
-     * )
-     */
-    private $deathYear;
+    private $deathDate;
 
     /**
      * @var string
@@ -155,23 +97,6 @@ class Person
      * @ORM\Column(name="deathPlace", type="string", length=50, nullable=true)
      */
     private $deathPlace;
-
-    /**
-     * @var \DateTime
-     *
-     * @ORM\Column(name="date", type="datetime")
-     */
-    private $date;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Place", inversedBy="person")
-     */
-    private $place;
-
-    /**
-     * @ORM\OneToMany(targetEntity="Confine", mappedBy="person")
-     */
-    private $confine;
 
     /**
      * @return int
@@ -238,51 +163,19 @@ class Person
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getBirthDay()
+    public function getBirthDate()
     {
-        return $this->birthDay;
+        return $this->birthDate;
     }
 
     /**
-     * @param int $birthDay
+     * @param string $birthDate
      */
-    public function setBirthDay($birthDay)
+    public function setBirthDate($birthDate)
     {
-        $this->birthDay = $birthDay;
-    }
-
-    /**
-     * @return int
-     */
-    public function getBirthMonth()
-    {
-        return $this->birthMonth;
-    }
-
-    /**
-     * @param int $birthMonth
-     */
-    public function setBirthMonth($birthMonth)
-    {
-        $this->birthMonth = $birthMonth;
-    }
-
-    /**
-     * @return int
-     */
-    public function getBirthYear()
-    {
-        return $this->birthYear;
-    }
-
-    /**
-     * @param int $birthYear
-     */
-    public function setBirthYear($birthYear)
-    {
-        $this->birthYear = $birthYear;
+        $this->birthDate = $birthDate;
     }
 
     /**
@@ -350,51 +243,19 @@ class Person
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getDeathDay()
+    public function getDeathDate()
     {
-        return $this->deathDay;
+        return $this->deathDate;
     }
 
     /**
-     * @param int $deathDay
+     * @param string $deathDate
      */
-    public function setDeathDay($deathDay)
+    public function setDeathDate($deathDate)
     {
-        $this->deathDay = $deathDay;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDeathMonth()
-    {
-        return $this->deathMonth;
-    }
-
-    /**
-     * @param int $deathMonth
-     */
-    public function setDeathMonth($deathMonth)
-    {
-        $this->deathMonth = $deathMonth;
-    }
-
-    /**
-     * @return int
-     */
-    public function getDeathYear()
-    {
-        return $this->deathYear;
-    }
-
-    /**
-     * @param int $deathYear
-     */
-    public function setDeathYear($deathYear)
-    {
-        $this->deathYear = $deathYear;
+        $this->deathDate = $deathDate;
     }
 
     /**
@@ -411,53 +272,5 @@ class Person
     public function setDeathPlace($deathPlace)
     {
         $this->deathPlace = $deathPlace;
-    }
-
-    /**
-     * @return \DateTime
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * @param \DateTime $date
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getConfine()
-    {
-        return $this->confine;
-    }
-
-    /**
-     * @param mixed $confine
-     */
-    public function setConfine($confine)
-    {
-        $this->confine = $confine;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPlace()
-    {
-        return $this->place;
-    }
-
-    /**
-     * @param mixed $place
-     */
-    public function setPlace($place)
-    {
-        $this->place = $place;
     }
 }

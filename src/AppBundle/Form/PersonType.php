@@ -10,6 +10,7 @@ namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -35,12 +36,16 @@ class PersonType extends AbstractType
                     ],
                     'expanded' => true,
                     'multiple' => false,
-                    'required' => true,
+                    /*'required' => true,*/
                 ]
             )
-            ->add('birthDay')
-            ->add('birthMonth')
-            ->add('birthYear')
+            ->add('birthDate', DateType::class,
+                [
+                    'widget' => 'text',
+                    'placeholder' => 'Fecha de nacimiento',
+                    'format' => 'ddMMyyyy',
+                    /*'input' => 'array',*/
+                ])
             ->add('birthPlace')
             ->add('homePlace')
             ->add('unionType', ChoiceType::class,
@@ -54,9 +59,13 @@ class PersonType extends AbstractType
                     ],
                 ])
             ->add('job')
-            ->add('deathDay')
-            ->add('deathMonth')
-            ->add('deathYear')
+            ->add('deathDate', DateType::class,
+                [
+                    'widget' => 'text',
+                    'placeholder' => 'Fecha de fallecimiento',
+                    'format' => 'ddMMyyyy',
+                    /*'input' => 'array',*/
+                ])
             ->add('deathPlace')
             ->add('submit', SubmitType::class)
         ;

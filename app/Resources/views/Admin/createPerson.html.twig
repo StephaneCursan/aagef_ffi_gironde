@@ -47,51 +47,9 @@
             </div>
 
             <div>
-                {{ form_label(personFormView.birthDay ) }}
-                {{ form_errors(personFormView.birthDay) }}
-                {{ form_widget(personFormView.birthDay,
-                    { 'attr' :
-                        {
-                            'class' : 'form-control-lg',
-                            'placeholder': 'DD'
-                        }
-                    },
-                    {
-                        'id' : ''
-                    })
-                }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.birthMonth) }}
-                {{ form_errors(personFormView.birthMonth) }}
-                {{ form_widget(personFormView.birthMonth,
-                    { 'attr' :
-                        {
-                            'class' : 'form-control-lg',
-                            'placeholder': 'MM'
-                        }
-                    },
-                    {
-                        'id' : ''
-                    })
-                }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.birthYear) }}
-                {{ form_errors(personFormView.birthYear) }}
-                {{ form_widget(personFormView.birthYear,
-                    { 'attr' :
-                        {
-                            'class' : 'form-control-lg',
-                            'placeholder': 'AAAA'
-                        }
-                    },
-                    {
-                        'id' : ''
-                    })
-                }}
+                {{ form_label(personFormView.birthDate, 'Fecha de nacimiento') }}
+                {{ form_errors(personFormView.birthDate) }}
+                {{ form_widget(personFormView.birthDate) }}
             </div>
 
             <div>
@@ -148,53 +106,11 @@
                 }}
             </div>
 
-            <div>
-                {{ form_label(personFormView.deathDay) }}
-                {{ form_errors(personFormView.deathDay) }}
-                {{ form_widget(personFormView.deathDay,
-                    { 'attr' :
-                        {
-                            'class' : 'form-control-lg',
-                            'placeholder': 'DD'
-                        }
-                    },
-                    {
-                        'id' : ''
-                    })
-                }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.deathMonth) }}
-                {{ form_errors(personFormView.deathMonth) }}
-                {{ form_widget(personFormView.deathMonth,
-                    { 'attr' :
-                        {
-                            'class' : 'form-control-lg',
-                            'placeholder': 'MM'
-                        }
-                    },
-                    {
-                        'id' : ''
-                    })
-                }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.deathYear) }}
-                {{ form_errors(personFormView.deathYear) }}
-                {{ form_widget(personFormView.deathYear,
-                    { 'attr' :
-                        {
-                            'class' : 'form-control-lg',
-                            'placeholder': 'AAAA'
-                        }
-                    },
-                    {
-                        'id' : ''
-                    })
-                }}
-            </div>
+        <div>
+            {{ form_label(personFormView.deathDate, 'Fecha de fallecimiento') }}
+            {{ form_errors(personFormView.deathDate) }}
+            {{ form_widget(personFormView.deathDate) }}
+        </div>
 
             <div>
                 {{ form_label(personFormView.deathPlace, 'Lugar del fallecimiento') }}
@@ -213,7 +129,13 @@
             </div>
 
             <div>
-                {{ form_row (personFormView.submit) }}
+                {{ form_row (personFormView.submit,
+                    {'attr':
+                        {
+                            'class': 'btn btn-primary'
+                        }
+                    })
+                }}
             </div>
 
         {{ form_end(personFormView) }}
