@@ -28,16 +28,11 @@ class Country
     private $id;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="name", type="integer", length=50)
+     * @ORM\Column(name="name", type="string", length=50)
      */
     private $name;
-
-    /**
-     * @ORM\OneToMany(targetEntity="Place", mappedBy="country", cascade={"persist"})
-     */
-    private $place;
 
     /**
      * @return int
@@ -56,7 +51,7 @@ class Country
     }
 
     /**
-     * @return int
+     * @return string
      */
     public function getName()
     {
@@ -64,26 +59,10 @@ class Country
     }
 
     /**
-     * @param int $name
+     * @param string $name
      */
     public function setName($name)
     {
         $this->name = $name;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPlace()
-    {
-        return $this->place;
-    }
-
-    /**
-     * @param mixed $place
-     */
-    public function setPlace($place)
-    {
-        $this->place = $place;
     }
 }

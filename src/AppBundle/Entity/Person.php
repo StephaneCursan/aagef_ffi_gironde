@@ -45,13 +45,6 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="sex", type="string", length=1)
-     */
-    private $sex;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="birthDate", type="date")
      */
     private $birthDate;
@@ -73,13 +66,6 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="unionType", type="string", length=10, nullable=true)
-     */
-    private $unionType;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="job", type="string", length=50, nullable=true)
      */
     private $job;
@@ -97,6 +83,11 @@ class Person
      * @ORM\Column(name="deathPlace", type="string", length=50, nullable=true)
      */
     private $deathPlace;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Place", inversedBy="person")
+     */
+    private $place;
 
     /**
      * @return int
@@ -144,22 +135,6 @@ class Person
     public function setFirstName($firstName)
     {
         $this->firstName = $firstName;
-    }
-
-    /**
-     * @return string
-     */
-    public function getSex()
-    {
-        return $this->sex;
-    }
-
-    /**
-     * @param string $sex
-     */
-    public function setSex($sex)
-    {
-        $this->sex = $sex;
     }
 
     /**
@@ -213,22 +188,6 @@ class Person
     /**
      * @return string
      */
-    public function getUnionType()
-    {
-        return $this->unionType;
-    }
-
-    /**
-     * @param string $unionType
-     */
-    public function setUnionType($unionType)
-    {
-        $this->unionType = $unionType;
-    }
-
-    /**
-     * @return string
-     */
     public function getJob()
     {
         return $this->job;
@@ -272,5 +231,21 @@ class Person
     public function setDeathPlace($deathPlace)
     {
         $this->deathPlace = $deathPlace;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPlace()
+    {
+        return $this->place;
+    }
+
+    /**
+     * @param mixed $place
+     */
+    public function setPlace($place)
+    {
+        $this->place = $place;
     }
 }

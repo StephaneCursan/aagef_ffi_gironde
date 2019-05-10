@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Añadir lugares{% endblock %}
+
+{% block body %}
+
+    <article>
+
+        {{ form_start(placeFormView) }}
+
+            <div class="form-group">
+                {{ form_label(placeFormView.city, 'Pueblo') }}
+                {{ form_errors(placeFormView.city) }}
+                {{ form_widget(placeFormView.city,
+                    { 'attr':
+                        {
+                            'class': 'form-control-lg',
+                            'placeholder': 'Pueblo'
+                        }
+                    },
+                    {
+                        'id': ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_label(placeFormView.zipCode, 'Código postal') }}
+                {{ form_errors(placeFormView.zipCode) }}
+                {{ form_widget(placeFormView.zipCode,
+                    { 'attr':
+                        {
+                            'class': 'form-control-lg',
+                            'placeholder': 'Código postal'
+                        }
+                    },
+                    {
+                        'id': ''
+                    })
+                }}
+            </div>
+
+            <div>
+                {{ form_row (placeFormView.submit,
+                    {'attr':
+                        {
+                            'class': 'btn btn-primary'
+                        }
+                    })
+                }}
+            </div>
+
+        {{ form_end(placeFormView) }}
+
+    </article>
+
+{% endblock %}

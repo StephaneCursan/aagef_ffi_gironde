@@ -49,16 +49,6 @@ class User
     private $password;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User_type", inversedBy="user")
-     */
-    private $user_type;
-
-    /**
-     * @ORM\OneToMany(targetEntity="Article", mappedBy="user", cascade={"persist"})
-     */
-    private $article;
-
-    /**
      * @return int
      */
     public function getId()
@@ -120,37 +110,5 @@ class User
     public function setPassword($password)
     {
         $this->password = $password;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUserType()
-    {
-        return $this->user_type;
-    }
-
-    /**
-     * @param mixed $user_type
-     */
-    public function setUserType($user_type)
-    {
-        $this->user_type = $user_type;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getArticle()
-    {
-        return $this->article;
-    }
-
-    /**
-     * @param mixed $article
-     */
-    public function setArticle($article)
-    {
-        $this->article = $article;
     }
 }

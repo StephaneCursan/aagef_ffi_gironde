@@ -8,13 +8,13 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Entity\Place;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Validator\Constraints\Choice;
 
 class PersonType extends AbstractType
 {
@@ -26,19 +26,6 @@ class PersonType extends AbstractType
         $builder
             ->add('lastName')
             ->add('firstName')
-            ->add('sex', ChoiceType::class,
-                [
-                    'label' => 'Sexo',
-                    'choices' => [
-                        'Masculino' => "Masculino",
-                        'Femenino' => "Femenino",
-                        'Desconocido' => "Desconocido",
-                    ],
-                    'expanded' => true,
-                    'multiple' => false,
-                    /*'required' => true,*/
-                ]
-            )
             ->add('birthDate', DateType::class,
                 [
                     'widget' => 'text',
@@ -46,18 +33,18 @@ class PersonType extends AbstractType
                     'format' => 'ddMMyyyy',
                     /*'input' => 'array',*/
                 ])
-            ->add('birthPlace')
-            ->add('homePlace')
-            ->add('unionType', ChoiceType::class,
+            ->add('birthPlace', EntityType::class,
                 [
-                    'choices' => [
-                        'Desconocido' => "Desconocido",
-                        'Soltero/a' => "Soltero/a",
-                        'Casado/a' => "Casado/a",
-                        'Divorciado/a' => "Divorciado/a",
-                        'Viudo/a' => "Viudo/a",
-                    ],
-                ])
+                    'class' => Place::class,
+                    'choice_label' => 'city'
+                ]
+            )
+            ->add('homePlace', EntityType::class,
+                [
+                    'class' => Place::class,
+                    'choice_label' => 'city'
+                ]
+            )
             ->add('job')
             ->add('deathDate', DateType::class,
                 [
@@ -66,8 +53,17 @@ class PersonType extends AbstractType
                     'format' => 'ddMMyyyy',
                     /*'input' => 'array',*/
                 ])
-            ->add('deathPlace')
-            ->add('submit', SubmitType::class)
+            ->add('deathPlace', EntityType::class,
+                [
+                    'class' => Place::class,
+                    'choice_label' => 'city'
+                ]
+            )
+            ->add('submit', SubmitType::class,
+                [
+                    'label' => 'OK'
+                ]
+            )
         ;
     }
 

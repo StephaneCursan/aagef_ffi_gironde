@@ -42,16 +42,6 @@ class Address
     private $address2;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Place", inversedBy="address")
-     */
-    private $place;
-
-    /**
-     * @ORM\OneToOne(targetEntity="Structure")
-     */
-    private $structure;
-
-    /**
      * @return int
      */
     public function getId()
@@ -97,37 +87,5 @@ class Address
     public function setAddress2($address2)
     {
         $this->address2 = $address2;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getPlace()
-    {
-        return $this->place;
-    }
-
-    /**
-     * @param mixed $place
-     */
-    public function setPlace($place)
-    {
-        $this->place = $place;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getStructure()
-    {
-        return $this->structure;
-    }
-
-    /**
-     * @param mixed $structure
-     */
-    public function setStructure($structure)
-    {
-        $this->structure = $structure;
     }
 }

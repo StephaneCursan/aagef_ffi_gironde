@@ -56,11 +56,6 @@ class Article
     private $date;
 
     /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="article")
-     */
-    private $user;
-
-    /**
      * @return int
      */
     public function getId()
@@ -138,21 +133,5 @@ class Article
     public function setDate($date)
     {
         $this->date = $date;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUser()
-    {
-        return $this->user;
-    }
-
-    /**
-     * @param mixed $user
-     */
-    public function setUser($user)
-    {
-        $this->user = $user;
     }
 }

@@ -38,7 +38,7 @@ class Place
     /**
      * @var int
      *
-     * @ORM\Column(name="zipCode", type="smallint", nullable=true)
+     * @ORM\Column(name="zipCode", type="integer", nullable=true)
      *
      * @Assert\Length(
      *     min = 5,
@@ -48,19 +48,9 @@ class Place
     private $zipCode;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Country", inversedBy="place")
-     */
-    private $country;
-
-    /**
      * @ORM\OneToMany(targetEntity="Person", mappedBy="place", cascade={"persist"})
      */
     private $person;
-
-    /**
-     * @ORM\OneToMany(targetEntity="Address", mappedBy="place", cascade={"persist"})
-     */
-    private $address;
 
     /**
      * @return int
@@ -113,38 +103,6 @@ class Place
     /**
      * @return mixed
      */
-    public function getCountry()
-    {
-        return $this->country;
-    }
-
-    /**
-     * @param mixed $country
-     */
-    public function setCountry($country)
-    {
-        $this->country = $country;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getAddress()
-    {
-        return $this->address;
-    }
-
-    /**
-     * @param mixed $address
-     */
-    public function setAddress($address)
-    {
-        $this->address = $address;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getPerson()
     {
         return $this->person;
@@ -156,5 +114,13 @@ class Place
     public function setPerson($person)
     {
         $this->person = $person;
+    }
+
+    /**
+     * @return string
+     */
+    public function __toString()
+    {
+        return (string) $this->getCity();
     }
 }
