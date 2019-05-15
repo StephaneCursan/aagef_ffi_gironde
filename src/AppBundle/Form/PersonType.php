@@ -8,7 +8,7 @@
 
 namespace AppBundle\Form;
 
-use AppBundle\Entity\Place;
+use AppBundle\Entity\Location;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -33,15 +33,15 @@ class PersonType extends AbstractType
                     'format' => 'ddMMyyyy',
                     /*'input' => 'array',*/
                 ])
-            ->add('birthPlace', EntityType::class,
+            ->add('birthLocation', EntityType::class,
                 [
-                    'class' => Place::class,
+                    'class' => Location::class,
                     'choice_label' => 'city'
                 ]
             )
-            ->add('homePlace', EntityType::class,
+            ->add('homeLocation', EntityType::class,
                 [
-                    'class' => Place::class,
+                    'class' => Location::class,
                     'choice_label' => 'city'
                 ]
             )
@@ -53,15 +53,15 @@ class PersonType extends AbstractType
                     'format' => 'ddMMyyyy',
                     /*'input' => 'array',*/
                 ])
-            ->add('deathPlace', EntityType::class,
+            ->add('deathLocation', EntityType::class,
                 [
-                    'class' => Place::class,
+                    'class' => Location::class,
                     'choice_label' => 'city'
                 ]
             )
             ->add('submit', SubmitType::class,
                 [
-                    'label' => 'OK'
+                    'label' => 'Valider'
                 ]
             )
         ;

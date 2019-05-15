@@ -30,16 +30,16 @@ class Document
     /**
      * @var string
      *
-     * @ORM\Column(name="classification", type="string", length=50, nullable=true)
+     * @ORM\Column(name="title", type="string", length=50)
      */
-    private $classification;
+    private $title;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="photo", type="string", length=255)
+     * @ORM\Column(name="classification", type="string", length=50, nullable=true)
      */
-    private $photo;
+    private $classification;
 
     /**
      * @var string
@@ -56,11 +56,11 @@ class Document
     private $type;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="date", type="datetime")
+     * @ORM\Column(name="photo", type="string", length=255)
      */
-    private $date;
+    private $photo;
 
     /**
      * @return int
@@ -81,6 +81,22 @@ class Document
     /**
      * @return string
      */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param string $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
     public function getClassification()
     {
         return $this->classification;
@@ -92,22 +108,6 @@ class Document
     public function setClassification($classification)
     {
         $this->classification = $classification;
-    }
-
-    /**
-     * @return string
-     */
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    /**
-     * @param string $photo
-     */
-    public function setPhoto($photo)
-    {
-        $this->photo = $photo;
     }
 
     /**
@@ -143,18 +143,18 @@ class Document
     }
 
     /**
-     * @return \DateTime
+     * @return string
      */
-    public function getDate()
+    public function getPhoto()
     {
-        return $this->date;
+        return $this->photo;
     }
 
     /**
-     * @param \DateTime $date
+     * @param string $photo
      */
-    public function setDate($date)
+    public function setPhoto($photo)
     {
-        $this->date = $date;
+        $this->photo = $photo;
     }
 }

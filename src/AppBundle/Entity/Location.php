@@ -12,12 +12,12 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Place
+ * Location
  *
  * @ORM\Entity
- * @ORM\Table(name="place")
+ * @ORM\Table(name="location")
  */
-class Place
+class Location
 {
     /**
      * @var int
@@ -36,19 +36,21 @@ class Place
     private $city;
 
     /**
-     * @var int
+     * @var string
      *
-     * @ORM\Column(name="zipCode", type="integer", nullable=true)
+     * @ORM\Column(name="departmentNum", type="string", length=3)
+     */
+    private $departmentNum;
+
+    /**
+     * @var string
      *
-     * @Assert\Length(
-     *     min = 5,
-     *     max = 5
-     * )
+     * @ORM\Column(name="zipCode", type="string", length=5)
      */
     private $zipCode;
 
     /**
-     * @ORM\OneToMany(targetEntity="Person", mappedBy="place", cascade={"persist"})
+     * @ORM\OneToMany(targetEntity="Person", mappedBy="location", cascade={"persist"})
      */
     private $person;
 
@@ -85,7 +87,23 @@ class Place
     }
 
     /**
-     * @return int
+     * @return string
+     */
+    public function getDepartmentNum()
+    {
+        return $this->departmentNum;
+    }
+
+    /**
+     * @param string $departmentNum
+     */
+    public function setDepartmentNum($departmentNum)
+    {
+        $this->departmentNum = $departmentNum;
+    }
+
+    /**
+     * @return string
      */
     public function getZipCode()
     {
@@ -93,7 +111,7 @@ class Place
     }
 
     /**
-     * @param int $zipCode
+     * @param string $zipCode
      */
     public function setZipCode($zipCode)
     {
@@ -114,13 +132,5 @@ class Place
     public function setPerson($person)
     {
         $this->person = $person;
-    }
-
-    /**
-     * @return string
-     */
-    public function __toString()
-    {
-        return (string) $this->getCity();
     }
 }

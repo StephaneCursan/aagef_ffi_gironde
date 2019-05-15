@@ -52,16 +52,16 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="birthPlace", type="string", length=50, nullable=true)
+     * @ORM\Column(name="birthLocation", type="string", length=50, nullable=true)
      */
-    private $birthPlace;
+    private $birthLocation;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="homePlace", type="string", length=50, nullable=true)
+     * @ORM\Column(name="homeLocation", type="string", length=50, nullable=true)
      */
-    private $homePlace;
+    private $homeLocation;
 
     /**
      * @var string
@@ -80,14 +80,14 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="deathPlace", type="string", length=50, nullable=true)
+     * @ORM\Column(name="deathLocation", type="string", length=50, nullable=true)
      */
-    private $deathPlace;
+    private $deathLocation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Place", inversedBy="person")
+     * @ORM\ManyToOne(targetEntity="Location", inversedBy="person")
      */
-    private $place;
+    private $location;
 
     /**
      * @return int
@@ -156,33 +156,33 @@ class Person
     /**
      * @return string
      */
-    public function getBirthPlace()
+    public function getBirthLocation()
     {
-        return $this->birthPlace;
+        return $this->birthLocation;
     }
 
     /**
-     * @param string $birthPlace
+     * @param string $birthLocation
      */
-    public function setBirthPlace($birthPlace)
+    public function setBirthLocation($birthLocation)
     {
-        $this->birthPlace = $birthPlace;
+        $this->birthLocation = $birthLocation;
     }
 
     /**
      * @return string
      */
-    public function getHomePlace()
+    public function getHomeLocation()
     {
-        return $this->homePlace;
+        return $this->homeLocation;
     }
 
     /**
-     * @param string $homePlace
+     * @param string $homeLocation
      */
-    public function setHomePlace($homePlace)
+    public function setHomeLocation($homeLocation)
     {
-        $this->homePlace = $homePlace;
+        $this->homeLocation = $homeLocation;
     }
 
     /**
@@ -220,32 +220,32 @@ class Person
     /**
      * @return string
      */
-    public function getDeathPlace()
+    public function getDeathLocation()
     {
-        return $this->deathPlace;
+        return $this->deathLocation;
     }
 
     /**
-     * @param string $deathPlace
+     * @param string $deathLocation
      */
-    public function setDeathPlace($deathPlace)
+    public function setDeathLocation($deathLocation)
     {
-        $this->deathPlace = $deathPlace;
+        $this->deathLocation = $deathLocation;
     }
 
     /**
      * @return mixed
      */
-    public function getPlace()
+    public function getLocation()
     {
-        return $this->place;
+        return $this->location;
     }
 
     /**
-     * @param mixed $place
+     * @param mixed $location
      */
-    public function setPlace($place)
+    public function setLocation($location)
     {
-        $this->place = $place;
+        $this->location = $location;
     }
 }

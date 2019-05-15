@@ -11,6 +11,7 @@ namespace AppBundle\Controller\Admin;
 use AppBundle\Entity\Document;
 use AppBundle\Form\DocumentType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -30,6 +31,21 @@ class AdminDocumentController extends Controller
         $documentForm->handleRequest($request);
 
         if ($documentForm->isSubmitted() && $documentForm->isValid()){
+
+            $file = $document->getPhoto();
+
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+
+            try {
+                $file->move(
+                  $this->getParameter('upload_files_document'),
+                  $fileName
+                );
+            } catch (FileException $e){
+                throw new \Exception($e->getMessage());
+            }
+
+            $document->setPhoto($fileName);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($document);

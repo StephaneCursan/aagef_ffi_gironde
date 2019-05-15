@@ -13,7 +13,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class PlaceType extends AbstractType
+class LocationType extends AbstractType
 {
     /**
      * {@inheritdoc}
@@ -25,7 +25,7 @@ class PlaceType extends AbstractType
             ->add('zipCode')
             ->add('submit', SubmitType::class,
                 [
-                    'label' => 'OK'
+                    'label' => 'Valider'
                 ]
             )
         ;
@@ -37,7 +37,7 @@ class PlaceType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Place'
+            'data_class' => 'AppBundle\Entity\Location'
         ));
     }
 
@@ -46,6 +46,6 @@ class PlaceType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'appbundle_place';
+        return 'appbundle_location';
     }
 }

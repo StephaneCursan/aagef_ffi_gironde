@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un document{% endblock %}
+
+{% block body %}
+
+    <article>
+
+        {{ form_start(documentFormView) }}
+
+        <div class="form-group">
+            {{ form_label(documentFormView.title, 'Titre') }}
+            {{ form_errors(documentFormView.title) }}
+            {{ form_widget(documentFormView.title,
+                { 'attr':
+                    {
+                        'class': 'form-control-lg',
+                        'documentholder': 'Titre'
+                    }
+                },
+                {
+                    'id': ''
+                })
+            }}
+        </div>
+
+        <div>
+            {{ form_label(documentFormView.classification, 'Cote') }}
+            {{ form_errors(documentFormView.classification) }}
+            {{ form_widget(documentFormView.classification,
+                { 'attr':
+                    {
+                        'class': 'form-control-lg',
+                        'documentholder': 'Cote'
+                    }
+                },
+                {
+                    'id': ''
+                })
+            }}
+        </div>
+
+        <div>
+            {{ form_label(documentFormView.archivesCentre, 'Conservé aux') }}
+            {{ form_errors(documentFormView.archivesCentre) }}
+            {{ form_widget(documentFormView.archivesCentre,
+                { 'attr':
+                    {
+                        'class': 'form_control-lg',
+                        'placeholder': 'Lieu de conservation'
+                    }
+                },
+                {
+                    'id': ''
+                })
+            }}
+        </div>
+
+        <div>
+            {{ form_label(documentFormView.type, 'Type') }}
+            {{ form_errors(documentFormView.type) }}
+            {{ form_widget(documentFormView.type,
+                { 'attr':
+                    {
+                        'class': 'form_control-lg',
+                        'placeholder': 'Type de document'
+                    }
+                },
+                {
+                    'id': ''
+                })
+            }}
+        </div>
+
+        <div>
+            {{ form_label(documentFormView.photo) }}
+            {{ form_errors(documentFormView.photo) }}
+            {{ form_widget(documentFormView.photo) }}
+        </div>
+
+        <div>
+            {{ form_row (documentFormView.submit,
+                { 'attr':
+                    {
+                        'class': 'btn btn-primary'
+                    }
+                })
+            }}
+        </div>
+
+        {{ form_end(documentFormView) }}
+
+    </article>
+
+{% endblock %}

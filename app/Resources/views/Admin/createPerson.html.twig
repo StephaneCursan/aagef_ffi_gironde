@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Añadir personas{% endblock %}
+{% block title %}Ajouter un individu{% endblock %}
 
 {% block body %}
 
@@ -9,13 +9,13 @@
         {{ form_start(personFormView) }}
 
             <div class="form-group">
-                {{ form_label(personFormView.lastName, 'Apellido(s)') }}
+                {{ form_label(personFormView.lastName, 'Nom(s)') }}
                 {{ form_errors(personFormView.lastName) }}
                 {{ form_widget(personFormView.lastName,
                     { 'attr':
                         {
                             'class': 'form-control-lg',
-                            'placeholder': 'Apellido(s)'
+                            'placeholder': 'Nom(s)'
                         }
                     },
                     {
@@ -25,13 +25,13 @@
             </div>
 
             <div>
-                {{ form_label(personFormView.firstName, 'Nombre(s)') }}
+                {{ form_label(personFormView.firstName, 'Prénom(s)') }}
                 {{ form_errors(personFormView.firstName) }}
                 {{ form_widget(personFormView.firstName,
                     { 'attr':
                         {
                             'class': 'form-control-lg',
-                            'placeholder': 'Nombre(s)'
+                            'placeholder': 'Prénom(s)'
                         }
                     },
                     {
@@ -41,19 +41,19 @@
             </div>
 
             <div>
-                {{ form_label(personFormView.birthDate, 'Fecha de nacimiento') }}
+                {{ form_label(personFormView.birthDate, 'Né le') }}
                 {{ form_errors(personFormView.birthDate) }}
                 {{ form_widget(personFormView.birthDate) }}
             </div>
 
             <div>
-                {{ form_label(personFormView.birthPlace, 'Lugar de nacimiento') }}
-                {{ form_errors(personFormView.birthPlace) }}
-                {{ form_widget(personFormView.birthPlace,
+                {{ form_label(personFormView.birthLocation, 'à') }}
+                {{ form_errors(personFormView.birthLocation) }}
+                {{ form_widget(personFormView.birthLocation,
                     { 'attr':
                         {
                             'class': 'form-control-lg',
-                            'placeholder': 'Lugar del nacimiento'
+                            'placeholder': 'Lieu de naissance'
                         }
                     },
                     {
@@ -63,13 +63,13 @@
             </div>
 
             <div>
-                {{ form_label(personFormView.homePlace, 'Lugar de domicilio') }}
-                {{ form_errors(personFormView.homePlace) }}
-                {{ form_widget(personFormView.homePlace,
+                {{ form_label(personFormView.homeLocation, 'Domicilié à') }}
+                {{ form_errors(personFormView.homeLocation) }}
+                {{ form_widget(personFormView.homeLocation,
                     { 'attr':
                         {
                             'class': 'form-control-lg',
-                            'placeholder': 'Lugar de domicilio'
+                            'placeholder': 'Lieu du domicile'
                         }
                     },
                     {
@@ -79,13 +79,13 @@
             </div>
 
             <div>
-                {{ form_label(personFormView.job, 'Profesión') }}
+                {{ form_label(personFormView.job, 'Profession') }}
                 {{ form_errors(personFormView.job) }}
                 {{ form_widget(personFormView.job,
                     { 'attr':
                         {
                             'class': 'form-control-lg',
-                            'placeholder': 'Profesión'
+                            'placeholder': 'Profession'
                         }
                     },
                     {
@@ -95,19 +95,19 @@
             </div>
 
             <div>
-                {{ form_label(personFormView.deathDate, 'Fecha de fallecimiento') }}
+                {{ form_label(personFormView.deathDate, 'Décédé le') }}
                 {{ form_errors(personFormView.deathDate) }}
                 {{ form_widget(personFormView.deathDate) }}
             </div>
 
             <div>
-                {{ form_label(personFormView.deathPlace, 'Lugar del fallecimiento') }}
-                {{ form_errors(personFormView.deathPlace) }}
-                {{ form_widget(personFormView.deathPlace,
-                    { 'attr' :
+                {{ form_label(personFormView.deathLocation, 'à') }}
+                {{ form_errors(personFormView.deathLocation) }}
+                {{ form_widget(personFormView.deathLocation,
+                    { 'attr':
                         {
                             'class': 'form-control-lg',
-                            'placeholder': 'Lugar del fallecimiento'
+                            'placeholder': 'Lieu de décès'
                         }
                     },
                     {
