@@ -1,0 +1,103 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mise à jour des données d'un individu{% endblock %}
+
+{% block body %}
+
+    <article>
+
+        {{ form_start(personFormView) }}
+
+        <div class="form-group">
+            {{ form_label(personFormView.lastName) }}
+            {{ form_errors(personFormView.lastName) }}
+            {{ form_widget(personFormView.lastName,
+                { 'attr' :
+                    {
+                        'class' : 'form-control-lg',
+                        'placeholder': "Nom(s)"
+                    }
+                },
+                {
+                    'id' : ''
+                })
+            }}
+
+        </div>
+
+        <div class="form-group">
+            {{ form_label(personFormView.firstName) }}
+            {{ form_errors(personFormView.firstName) }}
+            {{ form_widget(personFormView.firstName,
+                { 'attr' :
+                    {
+                        'class' : 'form-control-lg',
+                        'placeholder': "Prénom(s)"
+                    }
+                },
+                {
+                    'id' : ''
+                })
+            }}
+
+        </div>
+
+        <div>
+            {{ form_label(personFormView.birthDate, 'Né le') }}
+            {{ form_errors(personFormView.birthDate) }}
+            {{ form_widget(personFormView.birthDate) }}
+        </div>
+
+        <div>
+            {{ form_label(personFormView.birthLocation, 'à') }}
+            {{ form_errors(personFormView.birthLocation) }}
+            {{ form_widget(personFormView.birthLocation,
+                { 'attr':
+                    {
+                        'class': 'form-control-lg',
+                        'placeholder': 'Lieu de naissance'
+                    }
+                },
+                {
+                    'id': ''
+                })
+            }}
+        </div>
+
+        <div>
+            {{ form_label(personFormView.deathDate, 'Décédé le') }}
+            {{ form_errors(personFormView.deathDate) }}
+            {{ form_widget(personFormView.deathDate) }}
+        </div>
+
+        <div>
+            {{ form_label(personFormView.deathLocation, 'à') }}
+            {{ form_errors(personFormView.deathLocation) }}
+            {{ form_widget(personFormView.deathLocation,
+                { 'attr':
+                    {
+                        'class': 'form-control-lg',
+                        'placeholder': 'Lieu de décès'
+                    }
+                },
+                {
+                    'id': ''
+                })
+            }}
+        </div>
+
+        <div>
+            {{ form_row (personFormView.submit,
+                {'attr':
+                    {
+                        'class': 'btn btn-primary'
+                    }
+                })
+            }}
+        </div>
+
+        {{ form_end(personFormView) }}
+
+    </article>
+
+{% endblock %}

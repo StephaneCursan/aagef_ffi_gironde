@@ -31,7 +31,7 @@ class PersonType extends AbstractType
                     'widget' => 'text',
                     'placeholder' => 'Fecha de nacimiento',
                     'format' => 'ddMMyyyy',
-                    /*'input' => 'array',*/
+                    'required' => false
                 ])
             ->add('birthLocation', EntityType::class,
                 [
@@ -39,19 +39,12 @@ class PersonType extends AbstractType
                     'choice_label' => 'city'
                 ]
             )
-            ->add('homeLocation', EntityType::class,
-                [
-                    'class' => Location::class,
-                    'choice_label' => 'city'
-                ]
-            )
-            ->add('job')
             ->add('deathDate', DateType::class,
                 [
                     'widget' => 'text',
                     'placeholder' => 'Fecha de fallecimiento',
                     'format' => 'ddMMyyyy',
-                    /*'input' => 'array',*/
+                    'required' => false
                 ])
             ->add('deathLocation', EntityType::class,
                 [

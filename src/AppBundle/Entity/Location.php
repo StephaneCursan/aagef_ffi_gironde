@@ -43,13 +43,6 @@ class Location
     private $departmentNum;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="zipCode", type="string", length=5)
-     */
-    private $zipCode;
-
-    /**
      * @ORM\OneToMany(targetEntity="Person", mappedBy="location", cascade={"persist"})
      */
     private $person;
@@ -100,22 +93,6 @@ class Location
     public function setDepartmentNum($departmentNum)
     {
         $this->departmentNum = $departmentNum;
-    }
-
-    /**
-     * @return string
-     */
-    public function getZipCode()
-    {
-        return $this->zipCode;
-    }
-
-    /**
-     * @param string $zipCode
-     */
-    public function setZipCode($zipCode)
-    {
-        $this->zipCode = $zipCode;
     }
 
     /**

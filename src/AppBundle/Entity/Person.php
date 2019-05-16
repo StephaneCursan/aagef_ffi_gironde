@@ -45,7 +45,7 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="birthDate", type="date")
+     * @ORM\Column(name="birthDate", type="date", nullable=true)
      */
     private $birthDate;
 
@@ -59,21 +59,7 @@ class Person
     /**
      * @var string
      *
-     * @ORM\Column(name="homeLocation", type="string", length=50, nullable=true)
-     */
-    private $homeLocation;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="job", type="string", length=50, nullable=true)
-     */
-    private $job;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="deathDate", type="date")
+     * @ORM\Column(name="deathDate", type="date", nullable=true)
      */
     private $deathDate;
 
@@ -167,38 +153,6 @@ class Person
     public function setBirthLocation($birthLocation)
     {
         $this->birthLocation = $birthLocation;
-    }
-
-    /**
-     * @return string
-     */
-    public function getHomeLocation()
-    {
-        return $this->homeLocation;
-    }
-
-    /**
-     * @param string $homeLocation
-     */
-    public function setHomeLocation($homeLocation)
-    {
-        $this->homeLocation = $homeLocation;
-    }
-
-    /**
-     * @return string
-     */
-    public function getJob()
-    {
-        return $this->job;
-    }
-
-    /**
-     * @param string $job
-     */
-    public function setJob($job)
-    {
-        $this->job = $job;
     }
 
     /**

@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Afficher les données des individus{% endblock %}
+
+{% block body%}
+
+    <article>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Nom(s)</th>
+                        <th>Prénom(s)</th>
+                        <th>Né le</th>
+                        <th>Né à</th>
+                        <th>Décédé le</th>
+                        <th>Décédé à</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                {% for person in personList %}
+
+                    <tr>
+
+                            <td>{{ person.lastName }}</td>
+                            <td>{{ person.firstName }}</td>
+                            <td>
+                                {% if person.birthdate %}
+                                {{ person.birthDate|date('d/m/Y') }}
+                            </td>
+                                {% elseif person.birthdate == '' %}
+                                {% endif %}
+                            <td>{{ person.birthLocation }}</td>
+                            <td>
+                                {% if person.deathDate %}
+                                {{ person.deathDate|date('d/m/Y') }}
+                            </td>
+                                {% elseif person.birthdate == '' %}
+                                {% endif %}
+                            <td>{{ person.deathLocation }}</td>
+                            <td><a href="{{ path('person_update', {'id': person.id}) }}">U</a></td>
+                            <td><a href="{{ path('person_delete', {'id': person.id}) }}">X</a></td>
+
+                    </tr>
+
+                {% endfor %}
+
+                </tbody>
+
+            </table>
+
+    </article>
+
+{% endblock %}

@@ -19,7 +19,23 @@ class AdminPersonController extends Controller
     /**
      * @Route("Admin/database/persons", name="persons")
      */
-    public function PersonCreateAction(Request $request)
+    public function personListAction()
+    {
+        $personList = $this->getDoctrine()
+            ->getRepository(Person::class)
+            ->findAll();
+
+        return $this->render('Admin/listPerson.html.twig',
+            [
+                'personList' => $personList
+            ]
+        );
+    }
+
+    /**
+     * @Route("Admin/database/person_create", name="person_create")
+     */
+    public function personCreateAction(Request $request)
     {
         $person = new Person();
 
@@ -43,5 +59,55 @@ class AdminPersonController extends Controller
                 'personFormView' => $personFormView
             ]
         );
+    }
+
+    /**
+     * @Route("Admin/database/person_update/{id}", name="person_update")
+     */
+    public function personUpdateAction($id)
+    {
+        $request = Request::createFromGlobals();
+
+        $personRepository = $this->getDoctrine()->getRepository(Person::class);
+        $person = $personRepository->find($id);
+
+        $personForm = $this->createForm(personType::class, $person);
+
+        $personFormView = $personForm->createView();
+
+        $personForm->handleRequest($request);
+
+        if ($personForm->isSubmitted() && $personForm->isValid()){
+
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($person);
+            $entityManager->flush();
+
+            var_dump("les données de l'individu ont été mises à jour"); die;
+        }
+
+        return $this->render('Admin/updatePerson.html.twig',
+            [
+                'personFormView' => $personFormView
+            ]
+        );
+    }
+
+    /**
+     * @Route("Admin/database/person_delete/{id}", name="person_delete")
+     */
+    public function personDeleteAction($id)
+    {
+        $personRepository = $this->getDoctrine()
+            ->getRepository(Person::class);
+        $person = $personRepository->find($id);
+
+        $entityManager = $this->getDoctrine()
+            ->getManager();
+
+        $entityManager->remove($person);
+        $entityManager->flush();
+
+        var_dump("Un enregistrement a été supprimé de la table Person"); die;
     }
 }

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajouter un individu{% endblock %}
+{% block title %}Ajout d'un individu{% endblock %}
 
 {% block body %}
 
@@ -54,38 +54,6 @@
                         {
                             'class': 'form-control-lg',
                             'placeholder': 'Lieu de naissance'
-                        }
-                    },
-                    {
-                        'id': ''
-                    })
-                }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.homeLocation, 'Domicilié à') }}
-                {{ form_errors(personFormView.homeLocation) }}
-                {{ form_widget(personFormView.homeLocation,
-                    { 'attr':
-                        {
-                            'class': 'form-control-lg',
-                            'placeholder': 'Lieu du domicile'
-                        }
-                    },
-                    {
-                        'id': ''
-                    })
-                }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.job, 'Profession') }}
-                {{ form_errors(personFormView.job) }}
-                {{ form_widget(personFormView.job,
-                    { 'attr':
-                        {
-                            'class': 'form-control-lg',
-                            'placeholder': 'Profession'
                         }
                     },
                     {
