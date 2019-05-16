@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Afficher les données d'un document{% endblock %}
+
+{% block body%}
+
+    <article>
+
+        <div>
+
+            <a href="{{ path('documents') }}">
+                <img src="{{ asset('uploads/document/' ~ documentSingle.photo) }}" alt="">
+            </a>
+
+            <ul>
+                <li><a href="{{ path('documents') }}">{{ documentSingle.title }}</a></li>
+                <li>Conservé aux <a href="{{ path('documents') }}">{{ documentSingle.archivesCentre }}</a></li>
+                <li>Cote : <a href="{{ path('documents') }}">{{ documentSingle.classification }}</a></li>
+            </ul>
+
+        </div>
+
+    </article>
+
+{% endblock %}

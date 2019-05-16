@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mise à jour des données d'un document{% endblock %}
+
+{% block body %}
+
+    <article>
+
+        {{ form_start(documentFormView) }}
+
+        <div>
+            {{ form_label(documentFormView.photo) }}
+            {{ form_errors(documentFormView.photo) }}
+            {{ form_widget(documentFormView.photo) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(documentFormView.title, 'Titre') }}
+            {{ form_errors(documentFormView.title) }}
+            {{ form_widget(documentFormView.title,
+                { 'attr' :
+                    {
+                        'class' : 'form-control-lg',
+                        'placeholder': "Titre"
+                    }
+                },
+                {
+                    'id' : ''
+                })
+            }}
+
+        </div>
+
+        <div class="form-group">
+            {{ form_label(documentFormView.classification, 'Cote') }}
+            {{ form_errors(documentFormView.classification) }}
+            {{ form_widget(documentFormView.classification,
+                { 'attr' :
+                    {
+                        'class' : 'form-control-lg',
+                        'placeholder': "Cote"
+                    }
+                },
+                {
+                    'id' : ''
+                })
+            }}
+        </div>
+
+        <div>
+            {{ form_label(documentFormView.archivesCentre, 'Centre d\'archives') }}
+            {{ form_errors(documentFormView.archivesCentre) }}
+            {{ form_widget(documentFormView.archivesCentre,
+                { 'attr' :
+                    {
+                        'class' : 'form-control-lg',
+                        'placeholder': "Lieu de conservation"
+                    }
+                },
+                {
+                    'id' : ''
+                })
+            }}
+        </div>
+
+        <div>
+            {{ form_row (documentFormView.submit,
+                {'attr':
+                    {
+                        'class': 'btn btn-primary'
+                    }
+                })
+            }}
+        </div>
+
+        {{ form_end(documentFormView) }}
+
+    </article>
+
+{% endblock %}

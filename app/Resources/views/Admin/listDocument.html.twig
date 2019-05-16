@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Afficher les données des documents{% endblock %}
+
+{% block body%}
+
+    <article>
+
+        {% for document in documentList %}
+
+            <div>
+
+                <a href="{{ path('documentSingle', {'id': document.id}) }}">
+                    <img src="{{ asset('uploads/document/' ~ document.photo) }}" alt="">
+                </a>
+
+                <a href="{{ path('document_delete', {'id': document.id}) }}">X</a>
+
+                <a href="{{ path('document_update', {'id': document.id}) }}">U</a>
+
+                <a href="{{ path('documentSingle', {'id': document.id}) }}">
+                    <ul>
+                        <li>{{ document.title }}</li>
+                    </ul>
+                </a>
+
+            </div>
+
+        {% endfor %}
+
+    </article>
+
+{% endblock %}
