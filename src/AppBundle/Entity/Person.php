@@ -9,12 +9,11 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Person
  *
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PersonRepository")
  * @ORM\Table(name="person")
  */
 class Person
@@ -76,7 +75,9 @@ class Person
     private $location;
 
     /**
-     * @return int
+     * Get id
+     *
+     * @return integer
      */
     public function getId()
     {
@@ -84,14 +85,22 @@ class Person
     }
 
     /**
-     * @param int $id
+     * Set lastName
+     *
+     * @param string $lastName
+     *
+     * @return Person
      */
-    public function setId($id)
+    public function setLastName($lastName)
     {
-        $this->id = $id;
+        $this->lastName = $lastName;
+
+        return $this;
     }
 
     /**
+     * Get lastName
+     *
      * @return string
      */
     public function getLastName()
@@ -100,14 +109,22 @@ class Person
     }
 
     /**
-     * @param string $lastName
+     * Set firstName
+     *
+     * @param string $firstName
+     *
+     * @return Person
      */
-    public function setLastName($lastName)
+    public function setFirstName($firstName)
     {
-        $this->lastName = $lastName;
+        $this->firstName = $firstName;
+
+        return $this;
     }
 
     /**
+     * Get firstName
+     *
      * @return string
      */
     public function getFirstName()
@@ -116,15 +133,23 @@ class Person
     }
 
     /**
-     * @param string $firstName
+     * Set birthDate
+     *
+     * @param \DateTime $birthDate
+     *
+     * @return Person
      */
-    public function setFirstName($firstName)
+    public function setBirthDate($birthDate)
     {
-        $this->firstName = $firstName;
+        $this->birthDate = $birthDate;
+
+        return $this;
     }
 
     /**
-     * @return string
+     * Get birthDate
+     *
+     * @return \DateTime
      */
     public function getBirthDate()
     {
@@ -132,14 +157,22 @@ class Person
     }
 
     /**
-     * @param string $birthDate
+     * Set birthLocation
+     *
+     * @param string $birthLocation
+     *
+     * @return Person
      */
-    public function setBirthDate($birthDate)
+    public function setBirthLocation($birthLocation)
     {
-        $this->birthDate = $birthDate;
+        $this->birthLocation = $birthLocation;
+
+        return $this;
     }
 
     /**
+     * Get birthLocation
+     *
      * @return string
      */
     public function getBirthLocation()
@@ -148,15 +181,23 @@ class Person
     }
 
     /**
-     * @param string $birthLocation
+     * Set deathDate
+     *
+     * @param \DateTime $deathDate
+     *
+     * @return Person
      */
-    public function setBirthLocation($birthLocation)
+    public function setDeathDate($deathDate)
     {
-        $this->birthLocation = $birthLocation;
+        $this->deathDate = $deathDate;
+
+        return $this;
     }
 
     /**
-     * @return string
+     * Get deathDate
+     *
+     * @return \DateTime
      */
     public function getDeathDate()
     {
@@ -164,14 +205,22 @@ class Person
     }
 
     /**
-     * @param string $deathDate
+     * Set deathLocation
+     *
+     * @param string $deathLocation
+     *
+     * @return Person
      */
-    public function setDeathDate($deathDate)
+    public function setDeathLocation($deathLocation)
     {
-        $this->deathDate = $deathDate;
+        $this->deathLocation = $deathLocation;
+
+        return $this;
     }
 
     /**
+     * Get deathLocation
+     *
      * @return string
      */
     public function getDeathLocation()
@@ -180,26 +229,26 @@ class Person
     }
 
     /**
-     * @param string $deathLocation
+     * Set location
+     *
+     * @param \AppBundle\Entity\Location $location
+     *
+     * @return Person
      */
-    public function setDeathLocation($deathLocation)
+    public function setLocation(\AppBundle\Entity\Location $location = null)
     {
-        $this->deathLocation = $deathLocation;
+        $this->location = $location;
+
+        return $this;
     }
 
     /**
-     * @return mixed
+     * Get location
+     *
+     * @return \AppBundle\Entity\Location
      */
     public function getLocation()
     {
         return $this->location;
-    }
-
-    /**
-     * @param mixed $location
-     */
-    public function setLocation($location)
-    {
-        $this->location = $location;
     }
 }

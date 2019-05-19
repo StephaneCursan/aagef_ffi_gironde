@@ -51,7 +51,7 @@ class AdminDocumentController extends Controller
     }
 
     /**
-     * @Route("Admin/database/create_document", name="create_document")
+     * @Route("Admin/database/document_create", name="document_create")
      */
     public function DocumentCreateAction(Request $request)
     {
@@ -107,7 +107,7 @@ class AdminDocumentController extends Controller
         $oldFile = new File($this->getParameter('upload_files_document').$document->getPhoto());
         $document->setPhoto($oldFile);
 
-        $documentForm = $this->createForm(documentType::class, $document);
+        $documentForm = $this->createForm(DocumentType::class, $document);
 
         $documentFormView = $documentForm->createView();
 

@@ -68,7 +68,8 @@ class AdminPersonController extends Controller
     {
         $request = Request::createFromGlobals();
 
-        $personRepository = $this->getDoctrine()->getRepository(Person::class);
+        $personRepository = $this->getDoctrine()
+            ->getRepository(Person::class);
         $person = $personRepository->find($id);
 
         $personForm = $this->createForm(personType::class, $person);

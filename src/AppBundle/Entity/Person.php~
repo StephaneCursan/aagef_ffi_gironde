@@ -1,0 +1,76 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: lapiscine
+ * Date: 2019-05-02
+ * Time: 20:23
+ */
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Person
+ *
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PersonRepository")
+ * @ORM\Table(name="person")
+ */
+class Person
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="lastName", type="string", length=50, nullable=true)
+     */
+    private $lastName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="firstName", type="string", length=50, nullable=true)
+     */
+    private $firstName;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="birthDate", type="date", nullable=true)
+     */
+    private $birthDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="birthLocation", type="string", length=50, nullable=true)
+     */
+    private $birthLocation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="deathDate", type="date", nullable=true)
+     */
+    private $deathDate;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="deathLocation", type="string", length=50, nullable=true)
+     */
+    private $deathLocation;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Location", inversedBy="person")
+     */
+    private $location;
+}
