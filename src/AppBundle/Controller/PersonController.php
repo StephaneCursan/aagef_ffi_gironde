@@ -9,9 +9,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Person;
-use AppBundle\Form\PersonType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class PersonController extends Controller
