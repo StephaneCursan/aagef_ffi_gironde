@@ -23,7 +23,7 @@ class PersonController extends Controller
             ->getRepository(Person::class);
         $personList = $personRepository->findByLastName();
 
-        return $this -> render('searchPerson.html.twig',
+        return $this -> render('searches/searchPerson.html.twig',
             [
                 'personList' => $personList
             ]

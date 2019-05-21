@@ -27,7 +27,7 @@ class AdminDocumentController extends Controller
             ->getRepository(Document::class)
             ->findAll();
 
-        return $this->render('Admin/listDocument.html.twig',
+        return $this->render('admin/listDocument.html.twig',
             [
                 'documentList' => $documentList
             ]
@@ -43,7 +43,7 @@ class AdminDocumentController extends Controller
             ->getRepository(Document::class);
         $documentSingle = $documentRepository->find($id);
 
-        return $this->render('Admin//singleDocument.html.twig',
+        return $this->render('admin//singleDocument.html.twig',
             [
                 'documentSingle' => $documentSingle
             ]
@@ -87,7 +87,7 @@ class AdminDocumentController extends Controller
             var_dump('document enregistré'); die;
         }
 
-        return $this->render('Admin/createDocument.html.twig',
+        return $this->render('admin/createDocument.html.twig',
             [
                 'documentFormView' => $documentFormView
             ]
@@ -136,7 +136,7 @@ class AdminDocumentController extends Controller
             var_dump("les données du document ont été mises à jour"); die;
         }
 
-        return $this->render('Admin/updateDocument.html.twig',
+        return $this->render('admin/updateDocument.html.twig',
             [
                 'documentFormView' => $documentFormView
             ]

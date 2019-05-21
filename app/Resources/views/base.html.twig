@@ -6,8 +6,11 @@
 
         <!-- Required meta tags -->
         <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <title>{% block title %}AAGEF-FFI - Les Résistants espagnols en Gironde 1939-1945{% endblock %}</title>
+        <title>{% block title %}AAGEF-FFI | Les Résistants espagnols en Gironde 1939-1945{% endblock %}</title>
 
         <!-- Favicon management -->
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/apple-touch-icon.png') }}">
@@ -39,7 +42,16 @@
     </head>
 
     <body>
-        {% block body %}{% endblock %}
+        {% block header %}
+            {% include 'partials/_header.html.twig' %}
+        {% endblock %}
+
+        {% block main %}{% endblock %}
+
+        {% block footer %}
+            {% include 'partials/_footer.html.twig' %}
+        {% endblock %}
+
         {% block javascripts %}{% endblock %}
     </body>
 

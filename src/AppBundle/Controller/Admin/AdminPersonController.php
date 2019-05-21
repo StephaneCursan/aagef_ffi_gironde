@@ -25,7 +25,7 @@ class AdminPersonController extends Controller
             ->getRepository(Person::class)
             ->findAll();
 
-        return $this->render('Admin/listPerson.html.twig',
+        return $this->render('admin/listPerson.html.twig',
             [
                 'personList' => $personList
             ]
@@ -54,7 +54,7 @@ class AdminPersonController extends Controller
             var_dump('individu enregistré'); die;
         }
 
-        return $this->render('Admin/createPerson.html.twig',
+        return $this->render('admin/createPerson.html.twig',
             [
                 'personFormView' => $personFormView
             ]
@@ -87,7 +87,7 @@ class AdminPersonController extends Controller
             var_dump("les données de l'individu ont été mises à jour"); die;
         }
 
-        return $this->render('Admin/updatePerson.html.twig',
+        return $this->render('admin/updatePerson.html.twig',
             [
                 'personFormView' => $personFormView
             ]
