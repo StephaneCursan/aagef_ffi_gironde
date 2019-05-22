@@ -1,0 +1,63 @@
+/*** _header.html.twig start ***/
+
+.header {
+  background-color: $purple;
+}
+
+/** Display logo **/
+
+.headerBranding_logo {
+  height: 173px;
+}
+
+.headerBranding_navbar {
+  border-bottom: 1px dotted $grey;
+}
+
+/** Search field **/
+
+.headerBranding_searchField {
+  width: 160px;
+  height: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-size: .75rem;
+  letter-spacing: -0.01rem;
+}
+
+.headerBranding_searchField__btn {
+  display: none;
+}
+
+/** Language and accessibility toggles **/
+
+.headerBranding_langFlag,
+.headerBranding_accessibility{
+  height: 18px;
+}
+
+/** Branding name **/
+
+.headerBranding_siteName__name {
+  margin-top: 4.3vh;
+  font-size: 3.9rem;
+  letter-spacing: -.2rem;
+}
+
+.headerBranding_siteName__society {
+  margin-top: .75vh;
+  font-size: 1.3rem;
+  letter-spacing: .32rem;
+}
+
+/** Breadcrumb **/
+
+.headerBreadcrumb {
+  background-color: $cricketWhite;
+  font-size: .95rem;
+}
+
+.headerBreadcrumb_active {
+  color: $dark;
+}
+
+/*** _header.html.twig end ***/

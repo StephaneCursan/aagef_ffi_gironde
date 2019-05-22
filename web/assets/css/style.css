@@ -1,3 +1,115 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*** Colors ***/
+/*** _header.html.twig start ***/
+.header {
+  background-color: #a56893dc;
+}
+
+/** Display logo **/
+.headerBranding_logo {
+  height: 173px;
+}
+
+.headerBranding_navbar {
+  border-bottom: 1px dotted #c0c0c0;
+}
+
+/** Search field **/
+.headerBranding_searchField {
+  width: 160px;
+  height: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: -0.01rem;
+}
+
+.headerBranding_searchField__btn {
+  display: none;
+}
+
+/** Language and accessibility toggles **/
+.headerBranding_langFlag,
+.headerBranding_accessibility {
+  height: 18px;
+}
+
+/** Branding name **/
+.headerBranding_siteName__name {
+  margin-top: 4.3vh;
+  font-size: 3.9rem;
+  letter-spacing: -0.2rem;
+}
+
+.headerBranding_siteName__society {
+  margin-top: 0.75vh;
+  font-size: 1.3rem;
+  letter-spacing: 0.32rem;
+}
+
+/** Breadcrumb **/
+.headerBreadcrumb {
+  background-color: #f3fccf93;
+  font-size: 0.95rem;
+}
+
+.headerBreadcrumb_active {
+  color: #252525;
+}
+
+/*** _header.html.twig end ***/
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -5,60 +117,13 @@
   padding: 0;
 }
 
-.header {
-  background-color: #a56893dc;
+html {
+  scroll-behavior: smooth;
 }
 
-.headerBranding_logo {
-  position: absolute;
-  top: 36%;
-  left: 36%;
+body {
+  background-image: url("");
+  font-family: Futura, sans-serif;
 }
-
-.headerBranding_logo img {
-  height: 173px;
-}
-
-.headerBreadcrumb {
-  background-color: #a8ac9693;
-}
-
-/*.brandingHeader_navbar-searchField{
-  margin-bottom: auto;
-  margin-top: auto;
-  height: 60px;
-  background-color: #353b48;
-  border-radius: 30px;
-  padding: 10px;
-}
-
-.brandingHeader_navbar-searchField_input{
-  color: white;
-  border: 0;
-  outline: 0;
-  background: none;
-  width: 0;
-  caret-color: transparent;
-  line-height: 40px;
-  transition: width 0.4s linear;
-}
-
-.brandingHeader_navbar-searchField:hover > .brandingHeader_navbar-searchField_input{
-  padding: 0 10px;
-  width: 450px;
-  caret-color: red;
-  transition: width 0.4s linear;
-}
-
-.brandingHeader_navbar-searchField:hover > .brandingHeader_navbar-searchField_inputIcon{
-  height: 40px;
-  width: 40px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  color: white;
-}*/
 
 /*# sourceMappingURL=style.css.map */

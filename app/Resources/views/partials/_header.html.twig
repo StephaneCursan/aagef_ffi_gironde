@@ -1,62 +1,73 @@
-<header class="header container-fluid px-0">
+<header class="container-fluid px-0 header">
 
-    <div class="row mx-0">
+    <div class="row pb-2 mx-0">
 
-        <div class="col-lg-2 px-0">
+        <div class="col-lg-2 pt-3 pr-4 text-right">
+
+            <!-- Display logo -->
 
             <a href="{{ path('homepage') }}">
                 <img src="{{ asset('assets/images/logo/logo.png') }}"
                      alt="amicale des anciens guérilleros espagnols en france - forces françaises de l'intérieur"
-                     class="img-fluid">
+                     class="img-fluid headerBranding_logo">
             </a>
 
         </div>
 
         <div class="col-lg-10 px-0">
 
-            <nav class="row mx-0">
+            <nav class="navbar row px-0 mx-0 headerBranding_navbar">
 
-                <div class="col-lg-1 offset-lg-9">
+                <!-- Accessibility toggles -->
 
-                    <a href="#">
-                        <img src="{{ asset('assets/images/icons/zoom.png') }}" alt="zoom" title="Taille du texte">
+                <div class="col-lg-1 offset-lg-8 pr-4 pl-0 d-flex justify-content-end">
+
+                    <a href="#"><img src="{{ asset('assets/images/icons/zoom.png') }}"
+                                     alt="zoom" title="Taille du texte" class="mr-1 headerBranding_accessibility">
                     </a>
 
-                    <a href="#">
-                        <img src="{{ asset('assets/images/icons/brightness.png') }}" alt="contraste" title="Contraste">
-                    </a>
-
-                </div>
-
-                <div class="col-lg-1">
-
-                    <a href="#">
-                        <img src="{{ asset('assets/images/icons/fraFlag.png') }}" alt="français" title="Français">
-                    </a>
-
-                    <a href="#">
-                        <img src="{{ asset('assets/images/icons/spaFlag.png') }}" alt="espagnol" title="Espagnol">
+                    <a href="#"><img src="{{ asset('assets/images/icons/brightness.png') }}"
+                                     alt="contraste" title="Contraste" class="ml-1 headerBranding_accessibility">
                     </a>
 
                 </div>
 
-                <div class="col-lg-1">
+                <!-- Language toggle -->
 
-                    <input class="search_input" type="text" name="" placeholder="Rechercher..." aria-label="Rechercher">
-                    <a href="#" class="search_icon">
-                        <i class="fas fa-search"></i>
+                <div class="col-lg-1 px-0 d-flex justify-content-center">
+
+                    <a href="#"><img src="{{ asset('assets/images/icons/fraFlag.png') }}"
+                                     alt="français" title="Français" class="mr-1 headerBranding_langFlag">
                     </a>
+
+                    <a href="#"><img src="{{ asset('assets/images/icons/spaFlag.png') }}"
+                                     alt="espagnol" title="Espagnol" class="ml-1 headerBranding_langFlag">
+                    </a>
+
+                </div>
+
+                <!-- Search field-->
+
+                <div class="col-lg-2 px-0">
+
+                    <input class="form-control ml-4 rounded-pill headerBranding_searchField"
+                           type="search" placeholder="Rechercher" aria-label="Rechercher">
+                    <button class="btn btn-outline-success my-2 my-sm-0 headerBranding_searchField__btn"
+                            type="submit">
+                    </button>
 
                 </div>
 
             </nav>
 
-            <div class="row mx-0">
+            <!-- Branding name -->
 
-                <div class="col-lg-12">
+            <div class="row pl-2 mx-0">
 
-                    <h1>AAGEF-FFI section de la Gironde</h1>
-                    <h2>Amicale des Anciens Guérilleros Espagnols en France - FFI</h2>
+                <div class="col-lg-12 px-0">
+
+                    <h1 class="headerBranding_siteName__name">AAGEF-FFI section de la Gironde</h1>
+                    <h2 class="headerBranding_siteName__society">Amicale des Anciens Guérilleros Espagnols en France - FFI</h2>
 
                 </div>
 
@@ -66,12 +77,14 @@
 
     </div>
 
-    <nav class="row mx-0">
+    <!-- Breadcrumb -->
 
-        <div class="col-lg-12">
+    <nav class="row mx-0 headerBreadcrumb" aria-label="breadcrumb">
 
-            <ol>
-                <li>
+        <div class="col-lg-12 px-0">
+
+            <ol class="breadcrumb pl-5 my-0 rounded-0 headerBreadcrumb">
+                <li class="breadcrumb-item headerBreadcrumb_active" aria-current="page">
                     <i class="fas fa-home"></i> Accueil
                 </li>
             </ol>
