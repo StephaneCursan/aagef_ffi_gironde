@@ -15,6 +15,85 @@ html {
 }
 
 body {
-  background-image: url("");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   font-family: Futura, sans-serif;
+}
+
+.secondaryMenu_row {
+  width: 100%;
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.secondaryMenu_column {
+  width: calc(100% / 3 - 20px);
+  height: 150px;
+  background-color: silver;
+}
+
+.uniq {
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100px;
+  overflow: hidden;
+  background-color: $purple;
+}
+
+.secondaryMenu_column, .uniq {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: red;
+}
+
+.replaced {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  color: gold;
+}
+
+.replace {
+  min-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  transition: all linear .3s;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+  border: 3px dashed red;
+}
+
+.replace img {
+  animation: spinner linear 1s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+.secondaryMenu {
+  margin: 20px;
+}
+
+@keyframes spinner {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+
+}
+
+.showDiv {
+  height: 200px !important;
+  padding: 20px 40px !important;
+  opacity: 1 !important;
 }

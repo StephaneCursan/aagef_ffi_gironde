@@ -41,7 +41,8 @@
 
     </head>
 
-    <body>
+    <body style="background-image: url('{{ asset('assets/images/backgrounds/background.jpg') }}')">
+
         {% block header %}
             {% include 'partials/_header.html.twig' %}
         {% endblock %}
@@ -52,7 +53,10 @@
             {% include 'partials/_footer.html.twig' %}
         {% endblock %}
 
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            {% include 'partials/_javascripts.html.twig' %}
+        {% endblock %}
+
     </body>
 
 </html>

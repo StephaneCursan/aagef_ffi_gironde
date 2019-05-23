@@ -1,0 +1,28 @@
+/*** _footer.html.twig start ***/
+
+.footer {
+  background-color: $dark;
+  opacity: .9;
+  font-family: "Open Sans", sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.footer a {
+  color: $white;
+}
+
+.footer a:hover {
+  font-weight: bolder;
+  color: $cyan;
+}
+
+.footer h6 {
+  font-size: 1.3rem;
+}
+
+.footer li {
+  line-height: 1.5rem;
+}
+
+/*** _footer.html.twig end ***/
