@@ -1,39 +1,24 @@
-{% extends '../base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Recherche nominative | AAGEF-FFI - Les Résistants espagnols en Gironde 1939-1945{% endblock %}
 
-{% block content %}
+{% block main %}
 
-    <article>
+    {{ form_start(searchForm) }}
 
-        <table>
+    <div>
 
-            <thead>
+        <div>
+            {{ form_errors(searchForm.search) }}
+            {{ form_widget(searchForm.search, {'attr': {'class': 'form-control', 'placeholder': 'Rechercher'}}) }}
+        </div>
 
-            <tr>
+        <div>
+            {{ form_widget(searchForm.submit, {'attr': {'class': 'btn btn-primary' }}) }}
+        </div>
 
-                <th>Nom(s)</th>
+    </div>
 
-            </tr>
-
-            </thead>
-
-            <tbody>
-
-            {% for person in personList %}
-
-                <tr>
-
-                    <td>{{ person.lastName }}</td>
-
-                </tr>
-
-            {% endfor %}
-
-            </tbody>
-
-        </table>
-
-    </article>
+    {{ form_end(searchForm) }}
 
 {% endblock %}

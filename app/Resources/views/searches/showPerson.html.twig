@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche nominative | AAGEF-FFI - Les Résistants espagnols en Gironde 1939-1945{% endblock %}
+
+{% block main %}
+
+    <article>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>Nom(s)</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody>
+
+            {% for person in personList %}
+
+                <tr>
+
+                    <td>{{ person.lastName }}</td>
+
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </article>
+
+{% endblock %}

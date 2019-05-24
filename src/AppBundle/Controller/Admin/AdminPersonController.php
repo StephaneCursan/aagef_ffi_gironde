@@ -45,8 +45,8 @@ class AdminPersonController extends Controller
 
         $personForm->handleRequest($request);
 
-        if ($personForm->isSubmitted() && $personForm->isValid()){
-
+        if ($personForm->isSubmitted() && $personForm->isValid())
+        {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($person);
             $entityManager->flush();
@@ -72,7 +72,7 @@ class AdminPersonController extends Controller
             ->getRepository(Person::class);
         $person = $personRepository->find($id);
 
-        $personForm = $this->createForm(personType::class, $person);
+        $personForm = $this->createForm(PersonType::class, $person);
 
         $personFormView = $personForm->createView();
 
