@@ -20,13 +20,15 @@ class SearchType extends AbstractType
 
     public function setDefaultOptions(OptionsResolver $resolver)
     {
-        $resolver->setDefaults(array(
-            'error_bubbling' => true
-        ));
+        $resolver->setDefaults(
+            [
+                'error_bubbling' => true
+            ]
+        );
     }
 
-    public function gettName()
+    public function getName()
     {
-        return 'search_Form';
+        return 'searchForm';
     }
 }

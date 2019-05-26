@@ -29,7 +29,7 @@ class PersonController extends Controller
 
         if ($searchForm->isSubmitted() && $searchForm->isValid())
         {
-            $search = $searchForm->getData();
+            $search = $searchForm->getData()['search'];
 
             $personRepository = $this->getDoctrine()
                 ->getRepository(Person::class);
@@ -44,7 +44,7 @@ class PersonController extends Controller
 
         return $this -> render('searches/searchPerson.html.twig',
             [
-                'searchForm' => $searchFormView,
+                'searchFormView' => $searchFormView,
             ]
         );
     }

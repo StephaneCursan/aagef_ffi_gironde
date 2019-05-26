@@ -16,16 +16,17 @@ use Doctrine\ORM\EntityRepository;
  */
 class PersonRepository extends EntityRepository
 {
-    public function searchByLastName($lastName)
+    public function searchByLastName($lastName = false)
     {
-        $lastName = '';
+        $searchLastName = ($lastName != false) ? $lastName['lastName'] : '';
 
         $qb = $this -> createQueryBuilder('p');
 
         $query = $qb -> select('p')
                      -> where('p.lastName LIKE :lastName')
-                     -> setParameter('lastName', '%'.$lastName.'%')
+                     -> setParameter('lastName', '%'.$searchLastName.'%')
                      -> getQuery();
+
         $result = $query -> getArrayResult();
 
         return $result;

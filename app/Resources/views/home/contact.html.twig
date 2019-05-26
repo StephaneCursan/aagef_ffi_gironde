@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter | AAGEF-FFI section de la Gironde{% endblock %}
+
+{% block main %}
+
+    {{ form_start(contactFormView) }}
+
+        <div>
+            {{ form_widget(contactFormView.subject) }}
+            {{ form_errors(contactFormView.subject) }}
+        </div>
+
+        <div>
+            {{ form_widget(contactFormView.name) }}
+            {{ form_errors(contactFormView.name) }}
+        </div>
+
+        <div>
+            {{ form_widget(contactFormView.email) }}
+            {{ form_errors(contactFormView.email) }}
+        </div>
+
+        <div>
+            {{ form_widget(contactFormView.message) }}
+            {{ form_errors(contactFormView.message) }}
+        </div>
+
+    {# Render CSRF token etc. #}
+    <div style="display:none">
+        {{ form_rest(contactFormView) }}
+    </div>
+
+    <input type="submit" value="Submit">
+
+    {{ form_end(contactFormView) }}
+
+{% endblock %}

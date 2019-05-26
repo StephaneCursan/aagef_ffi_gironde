@@ -4,21 +4,34 @@
 
 {% block main %}
 
-    {{ form_start(searchForm) }}
+    {{ form_start(searchFormView) }}
 
     <div>
 
         <div>
-            {{ form_errors(searchForm.search) }}
-            {{ form_widget(searchForm.search, {'attr': {'class': 'form-control', 'placeholder': 'Rechercher'}}) }}
+            {{ form_errors(searchFormView.search) }}
+            {{ form_widget(searchFormView.search,
+                {'attr':
+                    {
+                        'class': 'form-control',
+                        'placeholder': 'Rechercher'
+                    }
+                })
+            }}
         </div>
 
         <div>
-            {{ form_widget(searchForm.submit, {'attr': {'class': 'btn btn-primary' }}) }}
+            {{ form_widget(searchFormView.submit,
+                {'attr':
+                    {
+                        'class': 'btn btn-primary'
+                    }
+                })
+            }}
         </div>
 
     </div>
 
-    {{ form_end(searchForm) }}
+    {{ form_end(searchFormView) }}
 
 {% endblock %}
