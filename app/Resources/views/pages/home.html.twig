@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AAGEF-FFI | Les Résistants espagnols en Gironde 1939-1945{% endblock %}
+
+{% block main %}
+
+    {% include 'partials/_flashMessages.html.twig' %}
+
+    <nav class="container-fluid">
+
+        <div class="row pt-5 pb-5 mx-5 my-5 justify-content-around">
+
+            <div class="col-lg-3 pt-5 text-center menuItem">
+
+                <a href="#" class="menuItem_link">
+
+                    <h2 class="pt-5 pb-2 menuItem_title">qui sommes-nous ?</h2>
+                    <h3 class="pb-5 menuItem_notice">découvrez notre histoire et nos objectifs</h3>
+
+                </a>
+
+            </div>
+
+            <div class="col-lg-3 pt-5 text-center menuItem">
+
+                <a href="#" class="menuItem_link">
+
+                    <h2 class="pt-5 pb-2 menuItem_title">agenda</h2>
+                    <h3 class="pb-5 menuItem_notice">nos manifestations passées et à venir</h3>
+
+                </a>
+
+            </div>
+
+            <div class="col-lg-3 pt-5 text-center menuItem">
+
+                <a href="#" class="menuItem_link">
+
+                    <h2 class="pt-5 pb-2 menuItem_title">actualités</h2>
+                    <h3 class="pb-5 menuItem_notice">de chez nous ou de partout ailleurs</h3>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="row pb-5 mx-5 mb-5 justify-content-around">
+
+                <div class="col-lg-3 pt-5 text-center menuItem">
+
+                    <a href="#" class="menuItem_link">
+
+                        <h2 class="pt-5 pb-2 menuItem_title">médiathèque</h2>
+                        <h3 class="pb-5 menuItem_notice">accédez a une riche documentation</h3>
+
+                    </a>
+
+                </div>
+
+            <div class="col-lg-3 pt-5 text-center menuItem">
+
+                <a href="#" class="py-5 menuItem_link">
+
+                    <h2 class="pt-5 pb-2 menuItem_title">bases de données</h2>
+                    <h3 class="pb-5 menuItem_notice">partez à la recherche de votre passé</h3>
+
+                </a>
+
+            </div>
+
+            <div class="col-lg-3 pt-5 text-center menuItem">
+
+                <a href="{{ path('contact') }}" class="menuItem_link">
+
+                    <h2 class="pt-5 pb-2 menuItem_title">contacts</h2>
+                    <h3 class="pb-5 menuItem_notice">rejoignez-nous, soutenez-nous</h3>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+{% endblock %}
