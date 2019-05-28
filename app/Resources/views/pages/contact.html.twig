@@ -26,6 +26,11 @@
             {{ form_errors(contactFormView.message) }}
         </div>
 
+        <div>
+            {{ form_widget(contactFormView.captcha) }}
+            {{ form_errors(contactFormView.captcha) }}
+        </div>
+
     {# Render CSRF token etc. #}
     <div style="display:none">
         {{ form_rest(contactFormView) }}

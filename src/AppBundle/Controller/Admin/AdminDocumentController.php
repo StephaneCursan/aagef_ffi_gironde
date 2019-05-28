@@ -35,7 +35,7 @@ class AdminDocumentController extends Controller
     }
 
     /**
-     * @Route("/database/documentSingle/{id}", name="documentSingle")
+     * @Route("Admin/database/documentSingle/{id}", name="documentSingle")
      */
     public function documentSingleAction($id)
     {

@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\NotBlank;
+use Gregwar\CaptchaBundle\Type\CaptchaType;
 
 class ContactType extends AbstractType
 {
@@ -84,6 +85,13 @@ class ContactType extends AbstractType
                                 ]
                             )
                         ]
+                ]
+            )
+            ->add('captcha', CaptchaType::class,
+                [
+                    'width' => 200,
+                    'height' => 50,
+                    'length' => 6,
                 ]
             )
         ;

@@ -1,0 +1,28 @@
+/*** _home.html.twig start ***/
+
+.menuItem {
+  background-color: $yellow;
+  opacity: .9;
+  border-radius: 5px;
+}
+
+.menuItem:hover {
+  background-color: $cyan;
+  opacity: 1;
+  transform: rotateZ(-2deg);
+  -webkit-transform: rotateZ(-2deg);
+  -ms-transform: rotateZ(-2deg);
+}
+
+.menuItem_title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: $black;
+}
+
+.menuItem_notice {
+  color: $black;
+  font-size: .95rem;
+}
+
+/*** _home.html.twig end ***/
