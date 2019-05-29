@@ -89,8 +89,8 @@ class ContactType extends AbstractType
             )
             ->add('captcha', CaptchaType::class,
                 [
-                    'width' => 200,
-                    'height' => 50,
+                    'width' => 237,
+                    'height' => 59.25,
                     'length' => 6,
                 ]
             )

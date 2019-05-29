@@ -1,0 +1,66 @@
+/*** _contactForm.html.twig start ***/
+
+.contactForm_container {
+  background-color: $yellow;
+  opacity: .9;
+  margin-top: 21vh;
+  margin-bottom: 21vh;
+  font-family: 'Metropolis', sans-serif;
+  font-size: .9rem;
+  color: $black;
+}
+
+.contactForm_title {
+  font-size: 2rem;
+}
+
+.contactForm_facebookLink {
+  color: $facebook;
+}
+
+.contactForm_address,
+.contactForm_notice {
+  line-height: 1.2rem;
+}
+
+.contactForm_fieldLabel {
+  margin-bottom: 1.2vh;
+  font-weight: bold;
+}
+
+.contactForm_field {
+  height: 6vh;
+  padding: 0 15px;
+  border: 0;
+  font-size: 1rem;
+}
+
+.contactForm_fieldMessage {
+  height: 20vh;
+  padding-top: 15px;
+}
+
+.contactForm_captcha {
+  height: 6vh;
+  margin-top: .5vh;
+  padding: 0 15px;
+  border: 0;
+  font-size: 1rem;
+}
+
+.contactForm_captchaError {
+  margin-top: 1.25vh;
+  font-weight: bold;
+  color: $red;
+}
+
+.contactForm_submit {
+  width: 120px;
+  height: 6vh;
+  background-color: $cyan;
+  border: 0;
+  font-weight: bold;
+  color: $white;
+}
+
+/*** _contactForm.html.twig end ***/

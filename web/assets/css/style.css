@@ -115,6 +115,33 @@ table {
 }
 
 /*** _header.html.twig end ***/
+/*** _home.html.twig start ***/
+.menuItem {
+  background-color: #f8d134;
+  opacity: 0.9;
+  border-radius: 5px;
+}
+
+.menuItem:hover {
+  background-color: #047afb;
+  opacity: 1;
+  transform: rotateZ(-2deg);
+  -webkit-transform: rotateZ(-2deg);
+  -ms-transform: rotateZ(-2deg);
+}
+
+.menuItem_title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #000;
+}
+
+.menuItem_notice {
+  color: #000;
+  font-size: 0.95rem;
+}
+
+/*** _home.html.twig end ***/
 /*** _footer.html.twig start ***/
 .footer {
   background-color: #252525;
@@ -142,6 +169,71 @@ table {
 }
 
 /*** _footer.html.twig end ***/
+/*** _contactForm.html.twig start ***/
+.contactForm_container {
+  background-color: #f8d134;
+  opacity: 0.9;
+  margin-top: 21vh;
+  margin-bottom: 21vh;
+  font-family: "Metropolis", sans-serif;
+  font-size: 0.9rem;
+  color: #000;
+}
+
+.contactForm_title {
+  font-size: 2rem;
+}
+
+.contactForm_facebookLink {
+  color: #3b5998;
+}
+
+.contactForm_address,
+.contactForm_notice {
+  line-height: 1.2rem;
+}
+
+.contactForm_fieldLabel {
+  margin-bottom: 1.2vh;
+  font-weight: bold;
+}
+
+.contactForm_field {
+  height: 6vh;
+  padding: 0 15px;
+  border: 0;
+  font-size: 1rem;
+}
+
+.contactForm_fieldMessage {
+  height: 20vh;
+  padding-top: 15px;
+}
+
+.contactForm_captcha {
+  height: 6vh;
+  margin-top: 0.5vh;
+  padding: 0 15px;
+  border: 0;
+  font-size: 1rem;
+}
+
+.contactForm_captchaError {
+  margin-top: 1.25vh;
+  font-weight: bold;
+  color: #c33329;
+}
+
+.contactForm_submit {
+  width: 120px;
+  height: 6vh;
+  background-color: #047afb;
+  border: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+/*** _contactForm.html.twig end ***/
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -159,31 +251,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: Futura, sans-serif;
-}
-
-.menuItem {
-  background-color: #f8d134;
-  opacity: 0.9;
-  border-radius: 5px;
-}
-
-.menuItem:hover {
-  background-color: #047afb;
-  opacity: 1;
-  transform: rotateZ(-2deg);
-  -webkit-transform: rotateZ(-2deg);
-  -ms-transform: rotateZ(-2deg);
-}
-
-.menuItem_title {
-  font-size: 1.5rem;
-  font-weight: bolder;
-  color: #000;
-}
-
-.menuItem_notice {
-  color: #000;
-  font-size: 0.95rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -4,40 +4,200 @@
 
 {% block main %}
 
-    {{ form_start(contactFormView) }}
+    <nav class="container p-5 contactForm_container">
 
-        <div>
-            {{ form_widget(contactFormView.subject) }}
-            {{ form_errors(contactFormView.subject) }}
-        </div>
+        {{ form_start(contactFormView) }}
 
-        <div>
-            {{ form_widget(contactFormView.name) }}
-            {{ form_errors(contactFormView.name) }}
-        </div>
+            <div class="row mb-4 justify-content-around">
 
-        <div>
-            {{ form_widget(contactFormView.email) }}
-            {{ form_errors(contactFormView.email) }}
-        </div>
+                <div class="col-lg-3">
 
-        <div>
-            {{ form_widget(contactFormView.message) }}
-            {{ form_errors(contactFormView.message) }}
-        </div>
+                    <a href="https://www.facebook.com/AAGEF-FFI-de-la-Gironde-549257251777131/" target="_blank"
+                       class="contactForm_facebookLink">
+                        <i class="fab fa-facebook fa-4x" title="Page Facebook"></i>
+                    </a>
 
-        <div>
-            {{ form_widget(contactFormView.captcha) }}
-            {{ form_errors(contactFormView.captcha) }}
-        </div>
+                </div>
 
-    {# Render CSRF token etc. #}
-    <div style="display:none">
-        {{ form_rest(contactFormView) }}
-    </div>
+                <div class="col-lg-3 align-self-center text-center">
 
-    <input type="submit" value="Submit">
+                    <h2 class="font-weight-bold text-uppercase contactForm_title">contact</h2>
 
-    {{ form_end(contactFormView) }}
+                </div>
+
+                <div class="col-lg-3 text-right">
+
+                    <p class="contactForm_address">
+                        <span class="font-weight-bold">Siège social</span><br>
+                        AAGEF-FFI de la Gironde<br>
+                        Maison du Combattant<br>
+                        97 rue de Saint-Genès<br>
+                        Bordeaux</p>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-4 mx-5">
+
+                <div class="col-lg px-0">
+
+                    <p class="font-italic contactForm_notice">Vous avez besoin d'aide ou de conseils ? Vous désirez nous
+                     prêter vos archives ?<br>
+                     Peut-être souhaitez-vous nous rejoindre ou nous soutenir ?<br>
+                     N'hésitez pas, faites-nous le savoir.</p>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-5 mx-5">
+
+                <div class="col-lg px-0">
+
+                    <p class="font-italic">Merci de bien renseigner chaque champs</p>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3 mx-5">
+
+                <div class="col-lg-6 pl-0 d-flex flex-column">
+
+                    {{ form_label(contactFormView.name, 'Nom(s) et prénom(s)',
+                        {'label_attr':
+                            {
+                                'class': 'contactForm_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_errors(contactFormView.name) }}
+                    {{ form_widget(contactFormView.name,
+                        {'attr':
+                            {
+                                'class': 'contactForm_field',
+                                'placeholder': 'Vos nom(s) et prénom(s)'
+                            }
+                        }
+                    )}}
+
+                </div>
+
+                <div class="col-lg-6 pr-0 d-flex flex-column">
+
+                    {{ form_label(contactFormView.email, 'Adresse électronique',
+                        {'label_attr':
+                            {
+                                'class': 'contactForm_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_errors(contactFormView.email) }}
+                    {{ form_widget(contactFormView.email,
+                        {'attr':
+                            {
+                                'class': 'contactForm_field',
+                                'placeholder': 'Votre adresse électronique'
+                            }
+                        }
+                    )}}
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3 mx-5">
+
+                <div class="col-lg px-0 d-flex flex-column">
+
+                    {{ form_label(contactFormView.subject, 'Objet',
+                        {'label_attr':
+                            {
+                                'class': 'contactForm_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_errors(contactFormView.subject) }}
+                    {{ form_widget(contactFormView.subject,
+                        {'attr':
+                            {
+                                'class': 'contactForm_field',
+                                'placeholder': 'Objet du message'
+                            }
+                        }
+                    )}}
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3 mx-5">
+
+                <div class="col-lg px-0 d-flex flex-column">
+
+                    {{ form_label(contactFormView.message, 'Message',
+                        {'label_attr':
+                            {
+                                'class': 'contactForm_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_errors(contactFormView.message) }}
+                    {{ form_widget(contactFormView.message,
+                        {'attr':
+                            {
+                                'class': 'contactForm_field contactForm_fieldMessage',
+                                'placeholder': 'Votre message'
+                            }
+                        }
+                    )}}
+
+                </div>
+
+            </div>
+
+            <div class="row mx-5">
+
+                <div class="col-lg-6 px-0 d-flex flex-column">
+
+                    {{ form_label(contactFormView.captcha, 'Test anti-spam',
+                        {'label_attr':
+                            {
+                                'class': 'contactForm_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_widget(contactFormView.captcha,
+                        {'attr':
+                            {
+                                'class': 'w-50 contactForm_captcha',
+                                'placeholder': 'Recopiez le code ci-dessus'
+                            }
+                        }
+                    )}}
+
+                    <div class="contactForm_captchaError">
+                        {{ form_errors(contactFormView.captcha) }}
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 pt-3 px-0 text-right">
+
+                    <input class="contactForm_submit" type="submit" value="Envoyer">
+
+                </div>
+
+            </div>
+
+            {# Render CSRF token etc. #}
+            <div style="display:none">
+                {{ form_rest(contactFormView) }}
+            </div>
+
+        {{ form_end(contactFormView) }}
+
+    </nav>
 
 {% endblock %}
