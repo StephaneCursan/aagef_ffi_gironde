@@ -82,4 +82,9 @@ fos_user:
         address: stephane.cursan@lapiscine.pro
         sender_name: AAGEF-FFI_33
 
+# gregwar_captcha Configuration
 gregwar_captcha: ~
+
+# white_october Configuration
+white_october_breadcrumbs:
+    separator: '>'

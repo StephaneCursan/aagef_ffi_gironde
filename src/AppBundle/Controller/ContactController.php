@@ -48,9 +48,6 @@ class ContactController extends Controller
         );
     }
 
-    /**
-     * @Route("/contact", name="send_email")
-     */
     private function sendEmailAction($data)
     {
         $contactEmail = 'stephane.cursan@orange.fr';
