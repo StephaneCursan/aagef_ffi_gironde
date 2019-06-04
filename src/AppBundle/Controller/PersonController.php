@@ -21,27 +21,42 @@ class PersonController extends Controller
      */
     public function searchPersonAction(Request $request)
     {
+        // création du gabarit de formulaire
         $searchForm = $this->createForm(SearchType::class);
-
+        // utilisation du gabarit pour créer une vue du formulaire
+        // destinée à être envoyée dans un fichier twig
         $searchFormView = $searchForm->createView();
-
+        // je récupère la variable $request qui contient les données de la requête,
+        // et notamment celles de la superglobale $_POST
         $searchForm->handleRequest($request);
-
+        // je récupère la variable $searchForm qui contient désormais le formulaire
+        // avec les données de la requête, et je vérifie qu'elles ont été correctement
+        // envoyées et qu'elles sont valides
         if ($searchForm->isSubmitted() && $searchForm->isValid())
         {
-            $search = $searchForm->getData()['search'];
-
+            $search = $searchForm->getData()
+                [
+                    'search'
+                ];
+            // je récupère une instance de Doctrine
             $personRepository = $this->getDoctrine()
+                // je récupère le repository de l'entité Person
+                // qui me permet d'effectuer des requêtes dans la BDD
                 ->getRepository(Person::class);
+            // j'utilise une méthode définie dans le repository de l'entité Person
+            // pour récupérer les éléments de la table Person dont la colonne 'lastName'
+            // contient celui saisi dans le formulaire
             $personList = $personRepository->searchByLastName(['lastName' => $search]);
-
+            // j'appelle un fichier twig, et je lui passe en paramètre 'personList'
+            // qui contient les données de la BDD récupérées par la requête
             return $this->render('searches/showPerson.html.twig',
                 [
                     'personList' => $personList
                 ]
             );
         }
-
+        // Si les données n'ont pas été enregistrées
+        // je renvoie vers le formulaire de recherche
         return $this -> render('searches/searchPerson.html.twig',
             [
                 'searchFormView' => $searchFormView,

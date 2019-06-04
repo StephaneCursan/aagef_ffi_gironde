@@ -4,6 +4,8 @@
 
 {% block main %}
 
+    {% include 'partials/_flashMessages.html.twig' %}
+
     <nav class="container p-5 contactForm_container">
 
         {{ form_start(contactFormView) }}

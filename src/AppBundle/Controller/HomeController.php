@@ -19,12 +19,4 @@ class HomeController extends Controller
             ]
         );
     }
-
-    /**
-     * @Route("/", name="flashMessages")
-     */
-    public function flashMessageAction()
-    {
-        return $this->render('flashMessages:pages/home.html.twig');
-    }
 }

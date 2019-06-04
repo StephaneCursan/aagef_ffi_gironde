@@ -4,34 +4,72 @@
 
 {% block main %}
 
-    {{ form_start(searchFormView) }}
+    {% include 'partials/_flashMessages.html.twig' %}
 
-    <div>
+    <nav class="container p-5 contactForm_container">
 
-        <div>
-            {{ form_errors(searchFormView.search) }}
-            {{ form_widget(searchFormView.search,
-                {'attr':
-                    {
-                        'class': 'form-control',
-                        'placeholder': 'Rechercher'
-                    }
-                })
-            }}
+        {{ form_start(searchFormView) }}
+
+            <div class="row mb-4">
+
+                <div class="col-lg text-center">
+
+                    <h2 class="font-weight-bold text-uppercase contactForm_title">recherche nominative</h2>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-4 mx-5">
+
+                <div class="col-lg px-0">
+
+                    <p class="font-italic contactForm_notice">Vous pouvez renseigner tout ou partie du ou des noms de la
+                       personne dont vous recherchez des informations.<br>
+                       Les résultats s'affichent au-dessous du formulaire.</p>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3 mx-5">
+
+                <div class="col-lg-6 offset-lg-3 pl-0 d-flex flex-column">
+
+                    {{ form_label(searchFormView.search, 'Nom(s)',
+                        {'label_attr':
+                            {
+                                'class': 'contactForm_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_errors(searchFormView.search) }}
+                    {{ form_widget(searchFormView.search,
+                        {'attr':
+                            {
+                                'class': 'contactForm_field',
+                                'placeholder': 'Nom(s)'
+                            }
+                        }
+                    )}}
+
+                </div>
+
+                <div class="col-lg-6 offset-lg-3 pt-3 pl-0 text-right">
+
+                    <input class="contactForm_submit" type="submit" value="Rechercher">
+
+                </div>
+
+            </div>
+
+        {# Render CSRF token etc. #}
+        <div style="display:none">
+            {{ form_rest(searchFormView) }}
         </div>
 
-        <div>
-            {{ form_widget(searchFormView.submit,
-                {'attr':
-                    {
-                        'class': 'btn btn-primary'
-                    }
-                })
-            }}
-        </div>
+        {{ form_end(searchFormView) }}
 
-    </div>
-
-    {{ form_end(searchFormView) }}
+    </nav>
 
 {% endblock %}

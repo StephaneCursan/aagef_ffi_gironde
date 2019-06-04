@@ -24,18 +24,19 @@ class ContactController extends Controller
         if ($request->isMethod('POST')) {
             $contactForm->handleRequest($request);
 
-            if ($contactForm->isSubmitted() && $contactForm->isValid()) {
-
-                if ($this->sendEmailAction($contactForm->getData())) {
+            if ($contactForm->isSubmitted() && $contactForm->isValid())
+            {
+                if ($this->sendEmailAction($contactForm->getData()))
+                {
                     $this->addFlash('success', 'Votre message a été envoyé avec succès. Nous le traiterons
                                                                dans les plus brefs délais.');
 
-                    return $this->redirectToRoute('homepage');
+                    return $this->redirectToRoute('contact');
 
                 } else {
 
-                    $this->addFlash('warning', 'Une erreur a empêché l\'envoi de votre message. Veuillez
-                                                               vérifier vos données puis éessayez de nouveau.');
+                    $this->addFlash('warning', 'Une erreur a empêché l\'envoi du message. Veuillez
+                                                               essayer à nouveau.');
 
                 }
             }
