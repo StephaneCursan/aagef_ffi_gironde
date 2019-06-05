@@ -88,3 +88,4 @@ gregwar_captcha: ~
 # white_october Configuration
 white_october_breadcrumbs:
     separator: '>'
+    listId: 'headerBreadcrumb_activeItem'

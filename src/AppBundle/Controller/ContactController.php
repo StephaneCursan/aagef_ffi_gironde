@@ -14,6 +14,11 @@ class ContactController extends Controller
      */
     public function contactAction(Request $request)
     {
+        $breadcrumbs = $this->get('white_october_breadcrumbs');
+
+        $breadcrumbs->addRouteItem('Contact', 'contact');
+        $breadcrumbs->prependRouteItem('Accueil', 'homepage');
+
         $contactForm = $this->createForm(ContactType::class, null,
             [
                 'action' => $this->generateUrl('contact'),

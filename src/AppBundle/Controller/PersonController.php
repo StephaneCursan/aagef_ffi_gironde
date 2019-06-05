@@ -21,6 +21,9 @@ class PersonController extends Controller
      */
     public function searchPersonAction(Request $request)
     {
+        $breadcrumbs = $this->get('white_october_breadcrumbs');
+        $breadcrumbs->addRouteItem('Base de données', 'person_search');
+        $breadcrumbs->prependRouteItem('Accueil', 'homepage');
         // création du gabarit de formulaire
         $searchForm = $this->createForm(SearchType::class);
         // utilisation du gabarit pour créer une vue du formulaire
@@ -32,12 +35,9 @@ class PersonController extends Controller
         // je récupère la variable $searchForm qui contient désormais le formulaire
         // avec les données de la requête, et je vérifie qu'elles ont été correctement
         // envoyées et qu'elles sont valides
-        if ($searchForm->isSubmitted() && $searchForm->isValid())
-        {
+        if ($searchForm->isSubmitted() && $searchForm->isValid()) {
             $search = $searchForm->getData()
-                [
-                    'search'
-                ];
+            ['search'];
             // je récupère une instance de Doctrine
             $personRepository = $this->getDoctrine()
                 // je récupère le repository de l'entité Person
@@ -49,9 +49,10 @@ class PersonController extends Controller
             $personList = $personRepository->searchByLastName(['lastName' => $search]);
             // j'appelle un fichier twig, et je lui passe en paramètre 'personList'
             // qui contient les données de la BDD récupérées par la requête
-            return $this->render('searches/showPerson.html.twig',
+            return $this->render('searches/searchPerson.html.twig',
                 [
-                    'personList' => $personList
+                    'personList' => $personList,
+                    'searchFormView' => $searchFormView
                 ]
             );
         }
@@ -59,7 +60,7 @@ class PersonController extends Controller
         // je renvoie vers le formulaire de recherche
         return $this -> render('searches/searchPerson.html.twig',
             [
-                'searchFormView' => $searchFormView,
+                'searchFormView' => $searchFormView
             ]
         );
     }

@@ -27,7 +27,7 @@ class ContactType extends AbstractType
                         [
                             new NotBlank(
                                 [
-                                    "message" => "Veuillez saisir votre nom"
+                                    'message' => 'Veuillez saisir votre nom'
                                 ]
                             )
                         ]
@@ -43,7 +43,7 @@ class ContactType extends AbstractType
                         [
                             new NotBlank(
                                 [
-                                    "message" => "Veuillez saisir l'objet du message"
+                                    'message' => 'Veuillez saisir l\'objet du message'
                                 ]
                             )
                         ]
@@ -59,12 +59,12 @@ class ContactType extends AbstractType
                         [
                             new NotBlank(
                                 [
-                                    "message" => "Veuillez saisir votre adresse électronique"
+                                    'message' => 'Veuillez saisir votre adresse électronique'
                                 ]
                             ),
                             new Email(
                                 [
-                                    "message" => "L'adresse électronique ne semble pas valide"
+                                    'message' => 'L\'adresse électronique ne semble pas valide'
                                 ]
                             )
                         ]
@@ -81,7 +81,7 @@ class ContactType extends AbstractType
                         [
                             new NotBlank(
                                 [
-                                    "message" => "Veuillez saisir votre message"
+                                    'message' => 'Veuillez saisir votre message'
                                 ]
                             )
                         ]
@@ -92,6 +92,7 @@ class ContactType extends AbstractType
                     'width' => 237,
                     'height' => 59.25,
                     'length' => 6,
+                    'invalid_message' => 'Le code de sécurité saisi est incorrect',
                 ]
             )
         ;

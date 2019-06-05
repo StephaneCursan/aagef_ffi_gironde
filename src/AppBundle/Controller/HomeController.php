@@ -13,6 +13,10 @@ class HomeController extends Controller
      */
     public function indexAction(Request $request)
     {
+        $breadcrumbs = $this->get('white_october_breadcrumbs');
+
+        $breadcrumbs->addRouteItem('Accueil', 'homepage');
+
         return $this -> render('pages/home.html.twig',
             [
                 'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
