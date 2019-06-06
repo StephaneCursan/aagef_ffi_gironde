@@ -6,7 +6,7 @@
 
     {% include 'partials/_flashMessages.html.twig' %}
 
-    <div class="container p-5 contactForm_container">
+    <div class="container p-5 formContainer">
 
         {{ form_start(contactFormView) }}
 
@@ -15,7 +15,7 @@
                 <div class="col-lg-3">
 
                     <a href="https://www.facebook.com/AAGEF-FFI-de-la-Gironde-549257251777131/" target="_blank"
-                       class="contactForm_facebookLink">
+                       class="form_facebookLink">
                         <i class="fab fa-facebook fa-4x" title="Page Facebook"></i>
                     </a>
 
@@ -23,13 +23,13 @@
 
                 <div class="col-lg-3 align-self-center text-center">
 
-                    <h2 class="font-weight-bold text-uppercase contactForm_title">contact</h2>
+                    <h2 class="font-weight-bold text-uppercase formTitle">contact</h2>
 
                 </div>
 
                 <div class="col-lg-3 text-right">
 
-                    <p class="contactForm_address">
+                    <p class="formAddress">
                         <span class="font-weight-bold">Siège social</span><br>
                         AAGEF-FFI de la Gironde<br>
                         Maison du Combattant<br>
@@ -44,7 +44,7 @@
 
                 <div class="col-lg px-0">
 
-                    <p class="font-italic contactForm_notice">Vous avez besoin d'aide ou de conseils ? Vous désirez nous
+                    <p class="font-italic formNotice">Vous avez besoin d'aide ou de conseils ? Vous désirez nous
                      prêter vos archives ?<br>
                      Peut-être souhaitez-vous nous rejoindre ou nous soutenir ?<br>
                      N'hésitez pas, faites-nous le savoir.</p>
@@ -70,7 +70,7 @@
                     {{ form_label(contactFormView.name, 'Nom(s) et prénom(s)',
                         {'label_attr':
                             {
-                                'class': 'contactForm_fieldLabel'
+                                'class': 'form_fieldLabel'
                             }
                         }
                     )}}
@@ -78,7 +78,7 @@
                     {{ form_widget(contactFormView.name,
                         {'attr':
                             {
-                                'class': 'contactForm_field',
+                                'class': 'formField',
                                 'placeholder': 'Vos nom(s) et prénom(s)'
                             }
                         }
@@ -91,7 +91,7 @@
                     {{ form_label(contactFormView.email, 'Adresse électronique',
                         {'label_attr':
                             {
-                                'class': 'contactForm_fieldLabel'
+                                'class': 'form_fieldLabel'
                             }
                         }
                     )}}
@@ -99,7 +99,7 @@
                     {{ form_widget(contactFormView.email,
                         {'attr':
                             {
-                                'class': 'contactForm_field',
+                                'class': 'formField',
                                 'placeholder': 'Votre adresse électronique'
                             }
                         }
@@ -116,7 +116,7 @@
                     {{ form_label(contactFormView.subject, 'Objet',
                         {'label_attr':
                             {
-                                'class': 'contactForm_fieldLabel'
+                                'class': 'form_fieldLabel'
                             }
                         }
                     )}}
@@ -124,7 +124,7 @@
                     {{ form_widget(contactFormView.subject,
                         {'attr':
                             {
-                                'class': 'contactForm_field',
+                                'class': 'formField',
                                 'placeholder': 'Objet du message'
                             }
                         }
@@ -141,7 +141,7 @@
                     {{ form_label(contactFormView.message, 'Message',
                         {'label_attr':
                             {
-                                'class': 'contactForm_fieldLabel'
+                                'class': 'form_fieldLabel'
                             }
                         }
                     )}}
@@ -149,7 +149,7 @@
                     {{ form_widget(contactFormView.message,
                         {'attr':
                             {
-                                'class': 'contactForm_field contactForm_fieldMessage',
+                                'class': 'formField form_fieldMessage',
                                 'placeholder': 'Votre message'
                             }
                         }
@@ -166,20 +166,20 @@
                     {{ form_label(contactFormView.captcha, 'Test anti-spam',
                         {'label_attr':
                             {
-                                'class': 'contactForm_fieldLabel'
+                                'class': 'form_fieldLabel'
                             }
                         }
                     )}}
                     {{ form_widget(contactFormView.captcha,
                         {'attr':
                             {
-                                'class': 'w-50 contactForm_captcha',
+                                'class': 'w-50 formCaptcha',
                                 'placeholder': 'Recopiez le code ci-dessus'
                             }
                         }
                     )}}
 
-                    <div class="contactForm_captchaError">
+                    <div class="formCaptcha_error">
                         {{ form_errors(contactFormView.captcha) }}
                     </div>
 
@@ -187,7 +187,7 @@
 
                 <div class="col-lg-6 pt-3 px-0 text-right">
 
-                    <input class="contactForm_submit" type="submit" value="Envoyer">
+                    <input class="formSubmit_button" type="submit" value="Envoyer">
 
                 </div>
 

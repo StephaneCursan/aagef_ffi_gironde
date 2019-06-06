@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Recherche nominative | AAGEF-FFI - Les Résistants espagnols en Gironde 1939-1945{% endblock %}
+
+{% block main %}
+
+    {% include 'partials/_flashMessages.html.twig' %}
+
+    <div class="container p-5 formContainer">
+
+        {{ form_start(searchFormView) }}
+
+            <div class="row mb-5">
+
+                <div class="col-lg text-center">
+
+                    <h2 class="font-weight-bold text-uppercase formTitle">recherche nominative</h2>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-5 mx-5">
+
+                <div class="col-lg px-0">
+
+                    <p class="font-italic formNotice">Vous pouvez renseigner tout ou partie du ou des noms de la
+                       personne dont vous recherchez des informations.<br>
+                       Les résultats s'affichent au-dessous du formulaire.</p>
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3 mx-5">
+
+                <div class="col-lg-6 offset-lg-3 pl-0 d-flex flex-column">
+
+                    {{ form_label(searchFormView.search, 'Nom(s)',
+                        {'label_attr':
+                            {
+                                'class': 'form_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_errors(searchFormView.search) }}
+                    {{ form_widget(searchFormView.search,
+                        {'attr':
+                            {
+                                'class': 'formField',
+                                'placeholder': 'Nom(s)'
+                            }
+                        }
+                    )}}
+
+                </div>
+
+                <div class="col-lg-6 offset-lg-3 pt-3 pl-0 text-right">
+
+                    <a href="{{ path('person_search') }}">
+                        <input class="mr-2 formReset_button" type="button" value="Réinitialiser">
+                    </a>
+
+                    <input class="formSubmit_button" type="submit" value="Rechercher">
+
+                </div>
+
+            </div>
+
+        {# Render CSRF token etc. #}
+        <div style="display:none">
+            {{ form_rest(searchFormView) }}
+        </div>
+
+        {{ form_end(searchFormView) }}
+
+        {% if personList is defined %}
+
+            <article class="table-responsive mt-5">
+
+                <table class="table table-dark table-bordered table-striped table-hover my-0 px-5">
+
+                    <thead class="thead-dark font-weight-bold">
+                        <tr>
+                            <th scope="col">Nom(s)</th>
+                            <th scope="col">Prénom(s)</th>
+                            <th scope="col">Date de naissance</th>
+                            <th scope="col">Lieu de naissance</th>
+                            <th scope="col">Date de décès</th>
+                            <th scope="col">Lieu de décès</th>
+                            <th scope="col" class="text-center">Vue</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                    {% for person in personList %}
+                        <tr>
+                            <td>{{ person.lastName }}</td>
+                            <td>{{ person.firstName }}</td>
+                            <td>{{ person.birthDate|localizeddate('long', 'none', 'fr') }}</td>
+                            <td>{{ person.birthLocation }}</td>
+                            {% if person.deathDate %}
+                                <td>{{ person.deathDate|localizeddate('long', 'none', 'fr') }}</td>
+                            {% elseif person.deathDate == '' %}
+                                <td></td>
+                            {% endif %}
+                            <td>{{ person.deathLocation }}</td>
+                            <td class="text-center">
+                                <a href="#" class="text-white">
+                                    <i class="far fa-eye" style="color: #f8d134;" title="Afficher le document"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+
+                </table>
+
+            </article>
+
+        {% endif %}
+
+    </div>
+
+{% endblock %}

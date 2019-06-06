@@ -33,15 +33,17 @@ class ContactController extends Controller
             {
                 if ($this->sendEmailAction($contactForm->getData()))
                 {
-                    $this->addFlash('success', 'Votre message a été envoyé avec succès. Nous le traiterons
-                                                               dans les plus brefs délais.');
+                    $this->addFlash('success', 'Votre message a été envoyé avec succès.
+                                                               Nous le traiterons dans les plus brefs délais.'
+                    );
 
                     return $this->redirectToRoute('contact');
 
                 } else {
 
-                    $this->addFlash('warning', 'Une erreur a empêché l\'envoi du message. Veuillez
-                                                               essayer à nouveau.');
+                    $this->addFlash('warning', 'Le message n\'a pu être envoyé.
+                                                               Veuillez essayer à nouveau.'
+                    );
 
                 }
             }

@@ -110,11 +110,22 @@ table {
   font-size: 0.95rem;
 }
 
-#headerBreadcrumb_activeItem {
+#wo-breadcrumbs {
   background-color: transparent;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 6px;
+}
+
+.breadcrumbItem,
+.breadcrumbItem a,
+.separator {
+  color: #000;
+}
+
+.breadcrumbItem,
+.breadcrumbItem a {
+  margin-right: 6px;
 }
 
 /*** _header.html.twig end ***/
@@ -172,8 +183,9 @@ table {
 }
 
 /*** _footer.html.twig end ***/
-/*** _contactForm.html.twig start ***/
-.contactForm_container {
+/*** contact.html.twig &
+searchPerson.html.twig start ***/
+.formContainer {
   background-color: #f8d134;
   opacity: 0.9;
   margin-top: 21vh;
@@ -183,37 +195,37 @@ table {
   color: #000;
 }
 
-.contactForm_title {
+.formTitle {
   font-size: 2rem;
 }
 
-.contactForm_facebookLink {
+.form_facebookLink {
   color: #3b5998;
 }
 
-.contactForm_address,
-.contactForm_notice {
+.formAddress,
+.formNotice {
   line-height: 1.2rem;
 }
 
-.contactForm_fieldLabel {
+.form_fieldLabel {
   margin-bottom: 1.2vh;
   font-weight: bold;
 }
 
-.contactForm_field {
+.formField {
   height: 6vh;
   padding: 0 15px;
   border: 0;
   font-size: 1rem;
 }
 
-.contactForm_fieldMessage {
+.form_fieldMessage {
   height: 20vh;
   padding-top: 15px;
 }
 
-.contactForm_captcha {
+.formCaptcha {
   height: 6vh;
   margin-top: 0.5vh;
   padding: 0 15px;
@@ -221,13 +233,13 @@ table {
   font-size: 1rem;
 }
 
-.contactForm_captchaError {
+.formCaptcha_error {
   margin-top: 1.25vh;
   font-weight: bold;
   color: #c33329;
 }
 
-.contactForm_submit {
+.formSubmit_button {
   width: 120px;
   height: 6vh;
   background-color: #047afb;
@@ -236,7 +248,34 @@ table {
   color: #fff;
 }
 
-/*** _contactForm.html.twig end ***/
+.formReset_button {
+  width: 120px;
+  height: 6vh;
+  background-color: #c3332993;
+  border: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+/*** contact.html.twig &
+searchPerson.html.twig end ***/
+/*** _flashMessages.html.twig start ***/
+.flashMessages {
+  position: fixed;
+  top: 35vh;
+  z-index: 1;
+}
+
+.flashMessages_boxDialog {
+  height: 30vh;
+  padding-top: 20vh;
+  font-family: "Metropolis", sans-serif;
+  font-size: 1.2rem;
+  color: #000;
+  line-height: 1.8rem;
+}
+
+/*** _flashMessages.html.twig end ***/
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;

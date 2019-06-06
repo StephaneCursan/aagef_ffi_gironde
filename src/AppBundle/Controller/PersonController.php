@@ -21,6 +21,7 @@ class PersonController extends Controller
      */
     public function searchPersonAction(Request $request)
     {
+        // mise à jour du breadcrumb
         $breadcrumbs = $this->get('white_october_breadcrumbs');
         $breadcrumbs->addRouteItem('Base de données', 'person_search');
         $breadcrumbs->prependRouteItem('Accueil', 'homepage');
@@ -49,7 +50,7 @@ class PersonController extends Controller
             $personList = $personRepository->searchByLastName(['lastName' => $search]);
             // j'appelle un fichier twig, et je lui passe en paramètre 'personList'
             // qui contient les données de la BDD récupérées par la requête
-            return $this->render('searches/searchPerson.html.twig',
+            return $this->render('pages/searchPerson.html.twig',
                 [
                     'personList' => $personList,
                     'searchFormView' => $searchFormView
@@ -58,7 +59,7 @@ class PersonController extends Controller
         }
         // Si les données n'ont pas été enregistrées
         // je renvoie vers le formulaire de recherche
-        return $this -> render('searches/searchPerson.html.twig',
+        return $this -> render('pages/searchPerson.html.twig',
             [
                 'searchFormView' => $searchFormView
             ]

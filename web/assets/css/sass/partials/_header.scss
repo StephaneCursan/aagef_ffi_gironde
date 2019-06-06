@@ -56,11 +56,22 @@
   font-size: .95rem;
 }
 
-#headerBreadcrumb_activeItem {
+#wo-breadcrumbs {
   background-color: transparent;
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 6px;
+}
+
+.breadcrumbItem,
+.breadcrumbItem a,
+.separator {
+  color: $black;
+}
+
+.breadcrumbItem,
+.breadcrumbItem a {
+  margin-right: 6px;
 }
 
 /*** _header.html.twig end ***/
