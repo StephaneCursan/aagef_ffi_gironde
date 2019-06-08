@@ -84,9 +84,13 @@ class AdminDocumentController extends Controller
             $entityManager->persist($document);
             $entityManager->flush();
 
-            var_dump('document enregistré'); die;
+            // affichage d'un message avertissant du bon déroulé de l'enregistrement
+            $this->addFlash('success', 'Le nouveau document a bien été enregistré');
+            // je réinitialise le formulaire d'enregistrement
+            return $this->redirectToRoute('document_create');
         }
-
+        // Si les données n'ont pas été enregistrées
+        // je renvoie vers le formulaire d'enregistrement
         return $this->render('admin/createDocument.html.twig',
             [
                 'documentFormView' => $documentFormView
@@ -132,8 +136,11 @@ class AdminDocumentController extends Controller
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($document);
             $entityManager->flush();
+            // affichage d'un message avertissant du bon déroulé de l'enregistrement
+            $this->addFlash('success', 'L\'enregistrement a été correctement mis à jour');
+            // je renvoie vers la liste de tous les documents
+            return $this->redirectToRoute('documents');
 
-            var_dump("les données du document ont été mises à jour"); die;
         }
 
         return $this->render('admin/updateDocument.html.twig',
@@ -157,7 +164,9 @@ class AdminDocumentController extends Controller
 
         $entityManager->remove($document);
         $entityManager->flush();
-
-        var_dump("Un enregistrement de la table Document a été supprimé"); die;
+        // affichage d'un message avertissant du bon déroulé de l'enregistrement
+        $this->addFlash('success', 'La suppression de l\'enregistrement s\'est correctement déroulée');
+        // je renvoie vers la liste de tous les documents
+        return $this->redirectToRoute('documents');
     }
 }

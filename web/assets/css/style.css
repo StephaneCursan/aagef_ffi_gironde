@@ -156,6 +156,23 @@ table {
 }
 
 /*** _home.html.twig end ***/
+.adminMenuItem {
+  background-color: #c33329;
+  opacity: 0.7;
+  border-radius: 5px;
+}
+
+.adminMenuItem_title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.adminMenuItem_notice {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
 /*** _footer.html.twig start ***/
 .footer {
   background-color: #252525;
@@ -220,6 +237,10 @@ searchPerson.html.twig start ***/
   font-size: 1rem;
 }
 
+.form_dateField {
+  height: 18vh;
+}
+
 .form_fieldMessage {
   height: 20vh;
   padding-top: 15px;
@@ -276,6 +297,8 @@ searchPerson.html.twig end ***/
 }
 
 /*** _flashMessages.html.twig end ***/
+/*** _login_content.html.twig start ***/
+/*** _login_content.html.twig end ***/
 * {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -294,5 +317,66 @@ body {
   background-attachment: fixed;
   font-family: Futura, sans-serif;
 }
+
+/*** Media Queries CSS start ***/
+@media (max-width: 992px) {
+  .headerBranding_logo {
+    height: 123px;
+  }
+
+  .headerBranding_searchField {
+    width: 100px;
+  }
+
+  .headerBranding_siteName__name {
+    margin-top: 3.6vh;
+    font-size: 2.5rem;
+    letter-spacing: 0;
+  }
+
+  .headerBranding_siteName__society {
+    margin-top: 1vh;
+    font-size: 0.85rem;
+    letter-spacing: 0.265rem;
+  }
+
+  .footer h6 {
+    font-size: 1.1rem;
+  }
+
+  .footer li {
+    font-size: 0.85rem;
+  }
+}
+@media (max-width: 768px) {
+  .headerBranding_logo {
+    height: 113px;
+  }
+
+  .headerBranding_searchField {
+    width: 130px;
+  }
+
+  .headerBranding_siteName__name {
+    margin-top: 3.8vh;
+    font-size: 2.3rem;
+  }
+
+  .headerBranding_siteName__society {
+    margin-top: 0.5vh;
+    font-size: 0.85rem;
+    letter-spacing: 0.21rem;
+  }
+
+  .footer li {
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+  }
+
+  .footer h6 {
+    font-size: 1rem;
+  }
+}
+/*** Media Queries CSS end ***/
 
 /*# sourceMappingURL=style.css.map */

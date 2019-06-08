@@ -26,3 +26,20 @@
 }
 
 /*** _home.html.twig end ***/
+
+.adminMenuItem {
+  background-color: $red;
+  opacity: .7;
+  border-radius: 5px;
+}
+
+.adminMenuItem_title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  color: $white;
+}
+
+.adminMenuItem_notice {
+  color: $white;
+  font-size: .95rem;
+}

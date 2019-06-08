@@ -21,6 +21,9 @@ class AdminPersonController extends Controller
      */
     public function personListAction()
     {
+        $breadcrumbs = $this->get('white_october_breadcrumbs');
+        $breadcrumbs->addRouteItem('Gestion des individus', 'persons');
+        $breadcrumbs->prependRouteItem('Interface d\'administration', 'adminHome');
         // je récupère une instance de Doctrine
         $personList = $this->getDoctrine()
             // je récupère le repository de l'entité Person
@@ -42,6 +45,10 @@ class AdminPersonController extends Controller
      */
     public function personCreateAction(Request $request)
     {
+        $breadcrumbs = $this->get('white_october_breadcrumbs');
+        $breadcrumbs->addRouteItem('Créer un individu', 'person_create');
+        $breadcrumbs->prependRouteItem('Gestion des individus', 'persons');
+        $breadcrumbs->prependRouteItem('Interface d\'administration', 'adminHome');
         // je crée une nouvelle instance de l'entité Person
         $person = new Person();
         // création du gabarit du formulaire

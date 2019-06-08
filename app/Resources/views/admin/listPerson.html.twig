@@ -1,63 +1,87 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Afficher les données des individus | AAGEF-FFI section de la Gironde{% endblock %}
+{% block title %}Gestion des individus | AAGEF-FFI section de la Gironde{% endblock %}
 
 {% block main %}
 
     {% include 'partials/_flashMessages.html.twig' %}
 
-    <article>
+    <div class="container p-5 formContainer">
 
-            <table>
+        <div class="row mb-4 justify-content-around">
 
-                <thead>
+            <div class="col-lg-6 offset-lg-3 align-self-center text-center">
+                <h2 class="font-weight-bold text-uppercase formTitle">Gestion des individus</h2>
+            </div>
 
-                    <tr>
+            <div class="col-lg-3 text-right">
 
-                        <th>Nom(s)</th>
-                        <th>Prénom(s)</th>
-                        <th>Né le</th>
-                        <th>Né à</th>
-                        <th>Décédé le</th>
-                        <th>Décédé à</th>
+                <a href="{{ path('person_create') }}">
+                    <input class="mr-2 formSubmit_button" type="button" value="Nouveau">
+                </a>
 
-                    </tr>
+            </div>
 
-                </thead>
+        </div>
 
-                <tbody>
+        <article class="table-responsive mt-5">
 
-                {% for person in personList %}
+                <table class="table table-dark table-bordered table-striped table-hover my-0 px-5">
 
-                    <tr>
+                    <thead class="thead-dark font-weight-bold">
+                        <tr>
+                            <th scope="col">Nom(s)</th>
+                            <th scope="col">Prénom(s)</th>
+                            <th scope="col">Né le</th>
+                            <th scope="col">Né à</th>
+                            <th scope="col">Décédé le</th>
+                            <th scope="col">Décédé à</th>
+                            <th scope="col" class="text-center">
+                                <i class="fas fa-pencil-alt" title="Modifier l'individu"></i>
+                            </th>
+                            <th scope="col" class="text-center">
+                                <i class="fas fa-trash-alt" title="Supprimer l'individu"></i>
+                            </th>
+                        </tr>
+                    </thead>
 
-                            <td>{{ person.lastName }}</td>
-                            <td>{{ person.firstName }}</td>
-                            <td>
-                                {% if person.birthdate %}
-                                {{ person.birthDate|date('d/m/Y') }}
-                            </td>
-                                {% elseif person.birthdate == '' %}
-                                {% endif %}
-                            <td>{{ person.birthLocation }}</td>
-                            <td>
-                                {% if person.deathDate %}
-                                {{ person.deathDate|date('d/m/Y') }}
-                            </td>
-                                {% elseif person.birthdate == '' %}
-                                {% endif %}
-                            <td>{{ person.deathLocation }}</td>
-                            <td><a href="{{ path('person_update', {'id': person.id}) }}">U</a></td>
-                            <td><a href="{{ path('person_delete', {'id': person.id}) }}">X</a></td>
+                    <tbody>
+                    {% for person in personList %}
+                        <tr>
+                                <td>{{ person.lastName }}</td>
+                                <td>{{ person.firstName }}</td>
+                                <td>
+                                    {% if person.birthdate %}
+                                    {{ person.birthDate|localizeddate('long', 'none', 'fr') }}
+                                </td>
+                                    {% elseif person.birthdate == '' %}
+                                    {% endif %}
+                                <td>{{ person.birthLocation }}</td>
+                                <td>
+                                    {% if person.deathDate %}
+                                    {{ person.deathDate|localizeddate('long', 'none', 'fr') }}
+                                </td>
+                                    {% elseif person.birthdate == '' %}
+                                    {% endif %}
+                                <td>{{ person.deathLocation }}</td>
+                                <td class="text-center">
+                                    <a href="{{ path('person_update', {'id': person.id}) }}">
+                                        <i class="fas fa-pencil-alt" style="color: #f8d134;" title="Modifier l'individu"></i>
+                                    </a>
+                                </td>
+                                <td class="text-center">
+                                    <a href="{{ path('person_delete', {'id': person.id}) }}">
+                                        <i class="fas fa-trash-alt" style="color: #f8d134;" title="Supprimer l'individu"></i>
+                                    </a>
+                                </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
 
-                    </tr>
+                </table>
 
-                {% endfor %}
+        </article>
 
-                </tbody>
-
-            </table>
-
-    </article>
+    </div>
 
 {% endblock %}

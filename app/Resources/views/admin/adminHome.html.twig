@@ -4,4 +4,47 @@
 
 {% block main %}
 
+    {% include 'partials/_flashMessages.html.twig' %}
+
+    <nav class="container-fluid py-5 my-5">
+
+        <div class="row pb-5 pb-md-0 pb-sm-0 mx-5 mb-5 mb-md-0 mb-sm-0 justify-content-around">
+
+            <div class="col-lg-3 col-md-9 col-sm-9 mb-md-4 mb-sm-4 text-center adminMenuItem">
+
+                <a href="{{ path('persons') }}" class="menuItem_link">
+
+                    <h2 class="mb-2 pt-5 adminMenuItem_title">individus</h2>
+                    <h3 class="pb-5 adminMenuItem_notice">ajouter, modifier, supprimer des individus</h3>
+
+                </a>
+
+            </div>
+
+            <div class="col-lg-3 col-md-9 col-sm-9 mb-md-4 mb-sm-4 text-center adminMenuItem">
+
+                <a href="{{ path('documents') }}" class="MenuItem_link">
+
+                    <h2 class="mb-2 pt-5 adminMenuItem_title">documents</h2>
+                    <h3 class="pb-5 adminMenuItem_notice">ajouter, modifier, supprimer des documents</h3>
+
+                </a>
+
+            </div>
+
+            <div class="col-lg-3 col-md-9 col-sm-9 mb-md-4 mb-sm-4 text-center adminMenuItem">
+
+                <a href="#" class="menuItem_link">
+
+                    <h2 class="mb-2 pt-5 adminMenuItem_title">articles</h2>
+                    <h3 class="pb-5 adminMenuItem_notice">rédiger, modifier, supprimer des articles</h3>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
 {% endblock %}

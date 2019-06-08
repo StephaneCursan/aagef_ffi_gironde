@@ -14,7 +14,6 @@ class HomeController extends Controller
     public function indexAction(Request $request)
     {
         $breadcrumbs = $this->get('white_october_breadcrumbs');
-
         $breadcrumbs->addRouteItem('Accueil', 'homepage');
 
         return $this -> render('pages/home.html.twig',
