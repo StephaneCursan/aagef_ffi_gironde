@@ -37,13 +37,13 @@
 
 /** Branding name **/
 
-.headerBranding_siteName__name {
+.headerBranding_shortName {
   margin-top: 4.3vh;
   font-size: 3.9rem;
   letter-spacing: -.2rem;
 }
 
-.headerBranding_siteName__society {
+.headerBranding_longName {
   margin-top: .75vh;
   font-size: 1.3rem;
   letter-spacing: .32rem;
@@ -56,16 +56,18 @@
   font-size: .95rem;
 }
 
-#wo-breadcrumbs {
-  background-color: transparent;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 6px;
+.headerBreadcrumb_iconHome {
+  padding: 12px 0;
 }
 
-.breadcrumbItem,
-.breadcrumbItem a,
-.separator {
+#wo-breadcrumbs {
+  background-color: $yellowLight;
+  margin-bottom: 0;
+  padding: 0 0 0 6px;
+}
+
+
+.breadcrumbItem a {
   color: $black;
 }
 

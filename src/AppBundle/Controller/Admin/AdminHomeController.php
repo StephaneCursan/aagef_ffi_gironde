@@ -12,7 +12,7 @@ class AdminHomeController extends Controller
     /**
      * @Route("/admin", name="adminHome")
      */
-    public function AdminIndexAction(Request $request)
+    public function adminIndexAction(Request $request)
     {
         $breadcrumbs = $this->get('white_october_breadcrumbs');
         $breadcrumbs->addRouteItem('Interface d\'administration', 'adminHome');

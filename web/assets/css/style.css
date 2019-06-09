@@ -92,13 +92,13 @@ table {
 }
 
 /** Branding name **/
-.headerBranding_siteName__name {
+.headerBranding_shortName {
   margin-top: 4.3vh;
   font-size: 3.9rem;
   letter-spacing: -0.2rem;
 }
 
-.headerBranding_siteName__society {
+.headerBranding_longName {
   margin-top: 0.75vh;
   font-size: 1.3rem;
   letter-spacing: 0.32rem;
@@ -106,20 +106,21 @@ table {
 
 /** Breadcrumb **/
 .headerBreadcrumb {
-  background-color: #f3fccf93;
+  background-color: #ffffc1;
   font-size: 0.95rem;
 }
 
-#wo-breadcrumbs {
-  background-color: transparent;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 6px;
+.headerBreadcrumb_iconHome {
+  padding: 12px 0;
 }
 
-.breadcrumbItem,
-.breadcrumbItem a,
-.separator {
+#wo-breadcrumbs {
+  background-color: #ffffc1;
+  margin-bottom: 0;
+  padding: 0 0 0 6px;
+}
+
+.breadcrumbItem a {
   color: #000;
 }
 
@@ -146,13 +147,13 @@ table {
 
 .menuItem_title {
   font-size: 1.5rem;
-  font-weight: bolder;
   color: #000;
+  font-weight: bolder;
 }
 
 .menuItem_notice {
-  color: #000;
   font-size: 0.95rem;
+  color: #000;
 }
 
 /*** _home.html.twig end ***/
@@ -175,7 +176,7 @@ table {
 
 /*** _footer.html.twig start ***/
 .footer {
-  background-color: #252525;
+  background-color: #000;
   opacity: 0.9;
   font-family: "Open Sans", sans-serif;
   font-weight: lighter;
@@ -209,7 +210,6 @@ searchPerson.html.twig start ***/
   margin-bottom: 21vh;
   font-family: "Metropolis", sans-serif;
   font-size: 0.9rem;
-  color: #000;
 }
 
 .formTitle {
@@ -291,8 +291,8 @@ searchPerson.html.twig end ***/
   height: 30vh;
   padding-top: 20vh;
   font-family: "Metropolis", sans-serif;
-  font-size: 1.2rem;
   color: #000;
+  font-size: 1.2rem;
   line-height: 1.8rem;
 }
 
@@ -316,6 +316,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   font-family: Futura, sans-serif;
+  color: #000;
 }
 
 /*** Media Queries CSS start ***/
@@ -328,13 +329,13 @@ body {
     width: 100px;
   }
 
-  .headerBranding_siteName__name {
+  .headerBranding_shortName {
     margin-top: 3.6vh;
     font-size: 2.5rem;
     letter-spacing: 0;
   }
 
-  .headerBranding_siteName__society {
+  .headerBranding_longName {
     margin-top: 1vh;
     font-size: 0.85rem;
     letter-spacing: 0.265rem;
@@ -357,12 +358,12 @@ body {
     width: 130px;
   }
 
-  .headerBranding_siteName__name {
+  .headerBranding_shortName {
     margin-top: 3.8vh;
     font-size: 2.3rem;
   }
 
-  .headerBranding_siteName__society {
+  .headerBranding_longName {
     margin-top: 0.5vh;
     font-size: 0.85rem;
     letter-spacing: 0.21rem;
