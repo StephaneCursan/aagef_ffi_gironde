@@ -95,13 +95,13 @@ table {
 .headerBranding_shortName {
   margin-top: 4.3vh;
   font-size: 3.9rem;
-  letter-spacing: -0.2rem;
+  letter-spacing: -0.1rem;
 }
 
 .headerBranding_longName {
   margin-top: 0.75vh;
   font-size: 1.3rem;
-  letter-spacing: 0.32rem;
+  letter-spacing: 0.375rem;
 }
 
 /** Breadcrumb **/
@@ -319,7 +319,25 @@ body {
   color: #000;
 }
 
-/*** Media Queries CSS start ***/
+/*** BackToTop Button ***/
+#backToTop {
+  display: none;
+  border-radius: 50% 20%/10% 40%;
+  background-color: #a56893dc;
+  padding: 12px;
+  position: fixed;
+  bottom: 21vh;
+  right: 1.6vw;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#backToTop:focus,
+#backToTop:hover {
+  opacity: 0.8;
+}
+
+/*** Media Queries CSS ***/
 @media (max-width: 992px) {
   .headerBranding_logo {
     height: 123px;
@@ -378,6 +396,5 @@ body {
     font-size: 1rem;
   }
 }
-/*** Media Queries CSS end ***/
 
 /*# sourceMappingURL=style.css.map */

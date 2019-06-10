@@ -27,7 +27,26 @@ body {
   color: $black;
 }
 
-/*** Media Queries CSS start ***/
+/*** BackToTop Button ***/
+
+#backToTop{
+  display: none;
+  border-radius: 50% 20% / 10% 40%;
+  background-color: $purple;
+  padding: 12px;
+  position: fixed;
+  bottom: 21vh;
+  right: 1.6vw;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#backToTop:focus,
+#backToTop:hover{
+  opacity: .8;
+}
+
+/*** Media Queries CSS ***/
 
 @media (max-width: 992px) {
 
@@ -92,5 +111,3 @@ body {
   }
 
 }
-
-/*** Media Queries CSS end ***/
