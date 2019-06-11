@@ -6,7 +6,7 @@ searchPerson.html.twig start ***/
   opacity: .9;
   margin-top: 21vh;
   margin-bottom: 21vh;
-  font-family: 'Metropolis', sans-serif;
+  font-family: $metropolis;
   font-size: .9rem;
 }
 
@@ -26,6 +26,51 @@ searchPerson.html.twig start ***/
 .form_fieldLabel {
   margin-bottom: 1.2vh;
   font-weight: bold;
+}
+
+.form_checkBox:not(checked),
+.form_checkBox:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.form_checkBox:not(checked) + label,
+.form_checkBox:checked + label {
+  position: relative;
+  padding: 2px 0 0 25px;
+  cursor: pointer;
+}
+
+.form_checkBox:not(checked) + label::before,
+.form_checkBox:checked + label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background-color: $white;
+}
+
+.form_checkBox:not(checked) + label::after,
+.form_checkBox:checked + label::after {
+  content: '✔';
+  position: absolute;
+  top: 2px;
+  left: 2.5px;
+  font-size: .95rem;
+  color: $cyan;
+  transition: all .2s;
+}
+
+.form_checkBox:not(checked) + label::after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.form_checkBox:checked + label::after {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .formField {

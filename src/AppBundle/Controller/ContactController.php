@@ -34,8 +34,7 @@ class ContactController extends Controller
                 if ($this->sendEmailAction($contactForm->getData()))
                 {
                     $this->addFlash('success', 'Votre message a été envoyé avec succès.
-                                                               Nous le traiterons dans les plus brefs délais.'
-                    );
+                                                               Nous le traiterons dans les plus brefs délais.');
 
                     return $this->redirectToRoute('contact');
 

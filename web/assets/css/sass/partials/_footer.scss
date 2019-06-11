@@ -3,7 +3,7 @@
 .footer {
   background-color: $black;
   opacity: .9;
-  font-family: "Open Sans", sans-serif;
+  font-family: $openSans;
   font-weight: lighter;
   text-transform: uppercase;
 }
@@ -18,7 +18,7 @@
 }
 
 .footer h6 {
-  font-size: 1.3rem;
+  color: $yellowLight;
 }
 
 .footer li {

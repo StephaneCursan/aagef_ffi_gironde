@@ -2,17 +2,28 @@
 
 .flashMessages {
   position: fixed;
-  top: 35vh;
+  top: 24vh;
   z-index: 1;
+  filter: brightness(2);
 }
 
-.flashMessages_boxDialog {
-  height: 30vh;
-  padding-top: 20vh;
-  font-family: 'Metropolis', sans-serif;
+.flashMessages_content {
+  filter: brightness(.5);
+  padding-top: 120px;
+  font-family: $metropolis;
   color: $black;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.flashMessages_close {
+  opacity: 1;
+  text-shadow: none;
+}
+
+.flashMessages_header {
+  border-top-right-radius: 15px;
+  box-shadow: 9px 10px 5px rgba(0, 0, 0, .7);
 }
 
 /*** _flashMessages.html.twig end ***/

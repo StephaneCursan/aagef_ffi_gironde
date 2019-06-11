@@ -71,7 +71,7 @@ class AdminPersonController extends Controller
             // je pousse les données de l'Unité de travail dans la BDD
             $entityManager->flush();
             // affichage d'un message avertissant du bon déroulé de l'enregistrement
-            $this->addFlash('success', 'Le nouvel individu a bien été enregistré');
+            $this->addFlash('success', 'Le nouvel individu a été enregistré avec succès.');
             // je réinitialise le formulaire d'enregistrement
             return $this->redirectToRoute('person_create');
         }

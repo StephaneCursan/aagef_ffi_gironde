@@ -19,7 +19,7 @@
 .headerBranding_searchField {
   width: 160px;
   height: 24px;
-  font-family: "Open Sans", sans-serif;
+  font-family: $openSans;
   font-size: .75rem;
   letter-spacing: -0.01rem;
 }
@@ -66,7 +66,6 @@
   padding: 0 0 0 6px;
 }
 
-
 .breadcrumbItem a {
   color: $black;
 }
@@ -74,6 +73,14 @@
 .breadcrumbItem,
 .breadcrumbItem a {
   margin-right: 6px;
+}
+
+.headerBreadcrumb_loggedAdmin {
+  color: $green;
+}
+
+.headerBreadcrumb_loggedAdmin:hover {
+  color: $red;
 }
 
 /*** _header.html.twig end ***/

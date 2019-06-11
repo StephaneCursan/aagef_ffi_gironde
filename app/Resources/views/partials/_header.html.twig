@@ -96,7 +96,7 @@
                 {% if app.user.username is defined %}
                     <li class="w-25 pr-4 align-self-center text-right">
                         <a href="{{ path('fos_user_security_logout') }}"
-                           title="{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}" class="text-success">
+                           title="{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}" class="headerBreadcrumb_loggedAdmin">
                             <i class="fas fa-user"></i> {{ app.user.username }}
                         </a>
                     </li>

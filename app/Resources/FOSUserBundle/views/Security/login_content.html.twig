@@ -28,7 +28,7 @@
 
                 <label for="username" class="form_fieldLabel">{{ 'security.login.username'|trans }}</label>
                 <input class="formField" type="text" id="username" name="_username" value="{{ last_username }}"
-                       required="required" autocomplete="username" />
+                       placeholder="Votre identifiant" required="required" autocomplete="username" />
 
             </div>
 
@@ -39,8 +39,8 @@
             <div class="col-lg-6 px-0 d-flex flex-column">
 
                 <label for="password" class="form_fieldLabel">{{ 'security.login.password'|trans }}</label>
-                <input class="formField" type="password" id="password" name="_password" required="required"
-                       autocomplete="current-password" />
+                <input class="formField" type="password" id="password" name="_password" placeholder="Votre mot de passe"
+                       required="required" autocomplete="current-password" />
 
             </div>
 
@@ -50,7 +50,7 @@
 
             <div class="col-lg-6 px-0">
 
-                <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+                <input type="checkbox" id="remember_me" class="form_checkBox" name="_remember_me" value="on" />
                 <label for="remember_me" class="form_fieldLabel">{{ 'security.login.remember_me'|trans }}</label>
 
             </div>

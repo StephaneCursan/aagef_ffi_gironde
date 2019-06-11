@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -58,6 +59,7 @@ table {
 }
 
 /*** Colors ***/
+/*** Fonts ***/
 /*** _header.html.twig start ***/
 .header {
   background-color: #a56893dc;
@@ -129,6 +131,14 @@ table {
   margin-right: 6px;
 }
 
+.headerBreadcrumb_loggedAdmin {
+  color: #55a747;
+}
+
+.headerBreadcrumb_loggedAdmin:hover {
+  color: #c33329;
+}
+
 /*** _header.html.twig end ***/
 /*** _home.html.twig start ***/
 .menuItem {
@@ -193,7 +203,7 @@ table {
 }
 
 .footer h6 {
-  font-size: 1.3rem;
+  color: #ffffc1;
 }
 
 .footer li {
@@ -208,7 +218,7 @@ searchPerson.html.twig start ***/
   opacity: 0.9;
   margin-top: 21vh;
   margin-bottom: 21vh;
-  font-family: "Metropolis", sans-serif;
+  font-family: Metropolis, sans-serif;
   font-size: 0.9rem;
 }
 
@@ -228,6 +238,51 @@ searchPerson.html.twig start ***/
 .form_fieldLabel {
   margin-bottom: 1.2vh;
   font-weight: bold;
+}
+
+.form_checkBox:not(checked),
+.form_checkBox:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.form_checkBox:not(checked) + label,
+.form_checkBox:checked + label {
+  position: relative;
+  padding: 2px 0 0 25px;
+  cursor: pointer;
+}
+
+.form_checkBox:not(checked) + label::before,
+.form_checkBox:checked + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+}
+
+.form_checkBox:not(checked) + label::after,
+.form_checkBox:checked + label::after {
+  content: "✔";
+  position: absolute;
+  top: 2px;
+  left: 2.5px;
+  font-size: 0.95rem;
+  color: #047afb;
+  transition: all 0.2s;
+}
+
+.form_checkBox:not(checked) + label::after {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.form_checkBox:checked + label::after {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .formField {
@@ -283,17 +338,28 @@ searchPerson.html.twig end ***/
 /*** _flashMessages.html.twig start ***/
 .flashMessages {
   position: fixed;
-  top: 35vh;
+  top: 24vh;
   z-index: 1;
+  filter: brightness(2);
 }
 
-.flashMessages_boxDialog {
-  height: 30vh;
-  padding-top: 20vh;
-  font-family: "Metropolis", sans-serif;
+.flashMessages_content {
+  filter: brightness(0.5);
+  padding-top: 120px;
+  font-family: Metropolis, sans-serif;
   color: #000;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.flashMessages_close {
+  opacity: 1;
+  text-shadow: none;
+}
+
+.flashMessages_header {
+  border-top-right-radius: 15px;
+  box-shadow: 9px 10px 5px rgba(0, 0, 0, 0.7);
 }
 
 /*** _flashMessages.html.twig end ***/
@@ -319,14 +385,14 @@ body {
   color: #000;
 }
 
-/*** BackToTop Button ***/
+/*** Back to top button ***/
 #backToTop {
   display: none;
   border-radius: 50% 20%/10% 40%;
-  background-color: #a56893dc;
+  background-color: #c3332993;
   padding: 12px;
   position: fixed;
-  bottom: 21vh;
+  top: 3.2vh;
   right: 1.6vw;
   font-size: 1.2rem;
   color: #fff;
@@ -334,7 +400,7 @@ body {
 
 #backToTop:focus,
 #backToTop:hover {
-  opacity: 0.8;
+  color: #f8d134;
 }
 
 /*** Media Queries CSS ***/

@@ -47,6 +47,7 @@
     <body style="background-image: url('{{ asset('assets/images/backgrounds/background.jpg') }}')">
     
         {% block header %}
+            {% include 'partials/_flashMessages.html.twig' %}
             {% include 'partials/_header.html.twig' %}
         {% endblock %}
 

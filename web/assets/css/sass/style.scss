@@ -23,27 +23,27 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  font-family: Futura, sans-serif;
+  font-family: $futura;
   color: $black;
 }
 
-/*** BackToTop Button ***/
+/*** Back to top button ***/
 
 #backToTop{
   display: none;
   border-radius: 50% 20% / 10% 40%;
-  background-color: $purple;
+  background-color: $redLight;
   padding: 12px;
   position: fixed;
-  bottom: 21vh;
+  top: 3.2vh;
   right: 1.6vw;
   font-size: 1.2rem;
-  color: #fff;
+  color: $white;
 }
 
 #backToTop:focus,
 #backToTop:hover{
-  opacity: .8;
+  color: $yellow;
 }
 
 /*** Media Queries CSS ***/
