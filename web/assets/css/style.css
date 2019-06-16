@@ -240,6 +240,48 @@ searchPerson.html.twig start ***/
   font-weight: bold;
 }
 
+.formField {
+  height: 6vh;
+  padding: 0 15px;
+  border: 0;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5) inset, 2px 2px 2px 0 rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+}
+
+.formField_select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+  text-overflow: ellipsis;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7rem top 50%, 0 0;
+  background-size: 0.65rem auto, 100%;
+  color: #757575;
+}
+
+.formField_select::-ms-expand {
+  display: none;
+}
+
+.formField_selectDate {
+  border: 0;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5) inset, 2px 2px 2px 0 rgba(255, 255, 255, 0.5);
+  color: #047afb;
+  font-size: 1.1rem;
+}
+
+.formField_date:focus {
+  outline: 5px auto -webkit-focus-ring-color;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5) inset, 2px 2px 2px 0 rgba(255, 255, 255, 0.5);
+}
+
 .form_checkBox:not(checked),
 .form_checkBox:checked {
   position: absolute;
@@ -261,16 +303,17 @@ searchPerson.html.twig start ***/
   left: 0;
   width: 17px;
   height: 17px;
-  background-color: #fff;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5) inset, 2px 2px 2px 0 rgba(255, 255, 255, 0.5);
 }
 
 .form_checkBox:not(checked) + label::after,
 .form_checkBox:checked + label::after {
   content: "✔";
   position: absolute;
-  top: 2px;
-  left: 2.5px;
-  font-size: 0.95rem;
+  top: 5px;
+  left: 4px;
+  font-size: 0.8rem;
   color: #047afb;
   transition: all 0.2s;
 }
@@ -285,24 +328,19 @@ searchPerson.html.twig start ***/
   transform: scale(1);
 }
 
-.formField {
-  height: 6vh;
-  padding: 0 15px;
-  border: 0;
-  font-size: 1rem;
-}
-
-.form_dateField {
-  height: 18vh;
-}
-
 .form_fieldMessage {
   height: 20vh;
   padding-top: 15px;
 }
 
+.captcha_image {
+  border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
 .formCaptcha {
   height: 6vh;
+  background-color: #f5f5f5;
+  box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.5) inset, 2px 2px 2px 0 rgba(255, 255, 255, 0.5);
   margin-top: 0.5vh;
   padding: 0 15px;
   border: 0;
@@ -320,6 +358,7 @@ searchPerson.html.twig start ***/
   height: 6vh;
   background-color: #047afb;
   border: 0;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.5), 0 2px 2px 0 rgba(255, 255, 255, 0.5) inset;
   font-weight: bold;
   color: #fff;
 }
@@ -331,6 +370,63 @@ searchPerson.html.twig start ***/
   border: 0;
   font-weight: bold;
   color: #fff;
+}
+
+.datepicker {
+  border-radius: 0;
+}
+
+.datepicker table {
+  margin: 4px;
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+.datepicker td,
+.datepicker th {
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  vertical-align: baseline;
+}
+
+.datepicker table tr th.prev,
+.datepicker table tr th.datepicker-switch,
+.datepicker table tr th.next,
+.datepicker table tr th.dow,
+.datepicker table tr td.day {
+  vertical-align: middle;
+}
+
+.datepicker table tr th.prev,
+.datepicker table tr th.datepicker-switch,
+.datepicker table tr th.next,
+.datepicker table tr th.day {
+  color: #000;
+}
+
+.datepicker table tr th.dow {
+  color: #a56893dc;
+}
+
+.datepicker table tr th.datepicker-switch {
+  font-weight: bold;
+}
+
+.datepicker table tr td.day:hover,
+.datepicker table tr td.day.focused {
+  background: #ffffc1;
+  cursor: pointer;
+}
+
+.datepicker table tr td.selected,
+.datepicker table tr td.selected.active {
+  background-image: linear-gradient(to bottom, #a56893dc, #c3332993);
+  background-repeat: repeat-x;
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
 }
 
 /*** contact.html.twig &

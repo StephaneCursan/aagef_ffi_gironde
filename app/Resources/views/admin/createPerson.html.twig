@@ -4,98 +4,187 @@
 
 {% block main %}
 
-    <article>
+    <div class="container p-5 formContainer">
+
+        <div class="row mb-4 justify-content-around">
+
+            <div class="col-lg text-center">
+                <h2 class="font-weight-bold text-uppercase formTitle">création d'un individu</h2>
+            </div>
+
+        </div>
 
         {{ form_start(personFormView) }}
 
-            <div class="form-group">
-                {{ form_label(personFormView.lastName, 'Nom(s)') }}
-                {{ form_errors(personFormView.lastName) }}
-                {{ form_widget(personFormView.lastName,
-                    { 'attr':
-                        {
-                            'class': 'form-control-lg',
-                            'placeholder': 'Nom(s)'
+            <div class="row mt-5 mb-3 mx-5">
+
+                <div class="col-lg-6 pl-0 d-flex flex-column">
+
+                    {{ form_label(personFormView.lastName, 'Nom(s)',
+                        {'label_attr':
+                            {
+                                'class': 'form_fieldLabel'
+                            }
                         }
-                    },
-                    {
-                        'id': ''
-                    })
-                }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.firstName, 'Prénom(s)') }}
-                {{ form_errors(personFormView.firstName) }}
-                {{ form_widget(personFormView.firstName,
-                    { 'attr':
-                        {
-                            'class': 'form-control-lg',
-                            'placeholder': 'Prénom(s)'
+                    )}}
+                    {{ form_errors(personFormView.lastName) }}
+                    {{ form_widget(personFormView.lastName,
+                        { 'attr':
+                            {
+                                'class': 'formField',
+                                'placeholder': 'Nom(s)'
+                            }
                         }
-                    },
-                    {
-                        'id': ''
-                    })
-                }}
-            </div>
+                    )}}
 
-            <div>
-                {{ form_label(personFormView.birthDate, 'Né le') }}
-                {{ form_errors(personFormView.birthDate) }}
-                {{ form_widget(personFormView.birthDate) }}
-            </div>
+                </div>
 
-            <div>
-                {{ form_label(personFormView.birthLocation, 'à') }}
-                {{ form_errors(personFormView.birthLocation) }}
-                {{ form_widget(personFormView.birthLocation,
-                    { 'attr':
-                        {
-                            'class': 'form-control-lg',
-                            'placeholder': 'Lieu de naissance'
+                <div class="col-lg-6 pr-0 d-flex flex-column">
+
+                    {{ form_label(personFormView.firstName, 'Prénom(s)',
+                        {'label_attr':
+                            {
+                                'class': 'form_fieldLabel'
+                            }
                         }
-                    },
-                    {
-                        'id': ''
-                    })
-                }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.deathDate, 'Décédé le') }}
-                {{ form_errors(personFormView.deathDate) }}
-                {{ form_widget(personFormView.deathDate) }}
-            </div>
-
-            <div>
-                {{ form_label(personFormView.deathLocation, 'à') }}
-                {{ form_errors(personFormView.deathLocation) }}
-                {{ form_widget(personFormView.deathLocation,
-                    { 'attr':
-                        {
-                            'class': 'form-control-lg',
-                            'placeholder': 'Lieu de décès'
+                    )}}
+                    {{ form_errors(personFormView.firstName) }}
+                    {{ form_widget(personFormView.firstName,
+                        {'attr':
+                            {
+                                'class': 'formField',
+                                'placeholder': 'Prénom(s)'
+                            }
                         }
-                    },
-                    {
-                        'id': ''
-                    })
-                }}
+                    )}}
+
+                </div>
+
             </div>
 
-            <div>
-                {{ form_row (personFormView.submit,
-                    {'attr':
-                        {
-                            'class': 'btn btn-primary'
+            <div class="row mb-3 mx-5">
+
+                <div class="col-lg-6 pl-0 d-flex flex-column input-daterange js-datepicker">
+
+                    {{ form_label(personFormView.birthDate, 'Né le',
+                        {'label_attr':
+                            {
+                                'class': 'form_fieldLabel'
+                            }
                         }
-                    })
-                }}
+                    )}}
+                    {{ form_errors(personFormView.birthDate) }}
+                    <div class="input-group">
+                    {{ form_widget(personFormView.birthDate,
+                        {'attr':
+                            {
+                                'class': 'form-control rounded-0 text-left formField formField_date',
+                                'placeholder': 'Date de naissance'
+                            }
+                        }
+                    )}}
+                        <div class="input-group-append">
+                            <span class="input-group-text formField_selectDate">
+                                <i class="far fa-calendar-alt" style="color: #007cb2;"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 pr-0 d-flex flex-column">
+
+                    {{ form_label(personFormView.birthLocation, 'à',
+                        {'label_attr':
+                            {
+                                'class': 'form_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_errors(personFormView.birthLocation) }}
+                    {{ form_widget(personFormView.birthLocation,
+                        {'attr':
+                            {
+                                'class': 'formField formField_select',
+                                'placeholder': 'Lieu de naissance'
+                            }
+                        }
+                    )}}
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3 mx-5">
+
+                <div class="col-lg-6 pl-0 d-flex flex-column input-daterange js-datepicker">
+
+                    {{ form_label(personFormView.deathDate, 'Décédé le',
+                        {'label_attr':
+                            {
+                                'class': 'form_fieldLabel',
+                            }
+                        }
+                    )}}
+                    {{ form_errors(personFormView.deathDate) }}
+                    <div class="input-group">
+                    {{ form_widget(personFormView.deathDate,
+                        {'attr':
+                            {
+                                'class': 'form-control rounded-0 text-left formField formField_date',
+                                'placeholder': 'Date de décès'
+                            }
+                        }
+                    )}}
+                        <div class="input-group-append">
+                            <span class="input-group-text formField_selectDate">
+                                <i class="far fa-calendar-alt" style="color: #007cb2;"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 pr-0 d-flex flex-column rounded-0">
+
+                    {{ form_label(personFormView.deathLocation, 'à',
+                        {'label_attr':
+                            {
+                                'class': 'form_fieldLabel'
+                            }
+                        }
+                    )}}
+                    {{ form_errors(personFormView.deathLocation) }}
+                    {{ form_widget(personFormView.deathLocation,
+                        { 'attr':
+                            {
+                                'class': 'formField formField_select',
+                                'placeholder': 'Lieu de décès'
+                            }
+                        }
+                    )}}
+
+                </div>
+
+            </div>
+
+            <div class="row mb-3 mx-5">
+
+                <div class="col-lg-12 pt-3 px-0 text-right">
+
+                    <input class="formSubmit_button" type="submit" value="Valider">
+
+                </div>
+
+            </div>
+
+            {# Render CSRF token etc. #}
+            <div style="display:none">
+                {{ form_rest(personFormView) }}
             </div>
 
         {{ form_end(personFormView) }}
 
-    </article>
+    </div>
 
 {% endblock %}

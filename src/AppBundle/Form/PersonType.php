@@ -28,28 +28,34 @@ class PersonType extends AbstractType
             ->add('firstName')
             ->add('birthDate', DateType::class,
                 [
-                    'widget' => 'text',
-                    'placeholder' => 'Fecha de nacimiento',
-                    'format' => 'ddMMyyyy',
+                    'widget' => 'single_text',
+                    'attr' => ['class' => 'js-datepicker'],
+                    'html5' => false,
                     'required' => false
-                ])
+                ]
+            )
             ->add('birthLocation', EntityType::class,
                 [
                     'class' => Location::class,
-                    'choice_label' => 'city'
+                    'choice_label' => 'city',
+                    'placeholder' => 'Lieu de naissance',
+                    'required' => false
                 ]
             )
             ->add('deathDate', DateType::class,
                 [
-                    'widget' => 'text',
-                    'placeholder' => 'Fecha de fallecimiento',
-                    'format' => 'ddMMyyyy',
+                    'widget' => 'single_text',
+                    'attr' => ['class' => 'js-datepicker'],
+                    'html5' => false,
                     'required' => false
-                ])
+                ]
+            )
             ->add('deathLocation', EntityType::class,
                 [
                     'class' => Location::class,
-                    'choice_label' => 'city'
+                    'choice_label' => 'city',
+                    'placeholder' => 'Lieu de décès',
+                    'required' => false
                 ]
             )
             ->add('submit', SubmitType::class,
